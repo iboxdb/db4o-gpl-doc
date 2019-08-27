@@ -1,0 +1,1539 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>DB4O GPL API Documentation - API - MLogin Class</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>DB4O GPL API Documentation</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#fields">Fields</a></p>
+<p><a href="#Methods">Methods</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Db4objects.Db4o.CS-2010.dll">Db4objects<wbr>.Db4o<wbr>.CS-2010<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Messages</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IClientSideMessage">IClientSideMessage</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessage">IMessage</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessageDispatcher">IMessageDispatcher</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessageWithResponse">IMessageWithResponse</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IServerSideMessage">IServerSideMessage</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassID">MClassID</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassMeta">MClassMeta</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassMetadataIdForName">M<wbr>Class<wbr>Metadata<wbr>Id<wbr>For<wbr>Name</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassNameForID">MClassNameForID</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClose">MClose</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCloseSocket">MCloseSocket</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommit">MCommit</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommitReplication">MCommitReplication</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommitSystemTransaction">M<wbr>Commit<wbr>System<wbr>Transaction</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommittedCallBackRegistry">M<wbr>Committed<wbr>Call<wbr>Back<wbr>Registry</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommittedInfo">MCommittedInfo</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCreateClass">MCreateClass</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MDelete">MDelete</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MDeleteBlobFile">MDeleteBlobFile</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MError">MError</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MFailed">MFailed</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGenerateTransactionTimestamp">M<wbr>Generate<wbr>Transaction<wbr>Timestamp</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetAll">MGetAll</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetClasses">MGetClasses</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetInternalIDs">MGetInternalIDs</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetThreadID">MGetThreadID</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MIdentity">MIdentity</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MIDList">MIDList</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MInstanceCount">MInstanceCount</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MIsAlive">MIsAlive</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLength">MLength</a></li>
+				<li class="selected"><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLogin">MLogin</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLoginOK">MLoginOK</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MNull">MNull</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectByUuid">MObjectByUuid</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSet">MObjectSet</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetFetch">MObjectSetFetch</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetFinalized">MObjectSetFinalized</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetGetId">MObjectSetGetId</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetIndexOf">MObjectSetIndexOf</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetReset">MObjectSetReset</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetSize">MObjectSetSize</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MOK">MOK</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MPing">MPing</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MPong">MPong</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MPrefetchIDs">MPrefetchIDs</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MProcessDeletes">MProcessDeletes</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MQueryExecute">MQueryExecute</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MQueryResult">MQueryResult</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRaiseCommitTimestamp">M<wbr>Raise<wbr>Commit<wbr>Timestamp</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadBlob">MReadBlob</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadBytes">MReadBytes</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadMultipleObjects">MReadMultipleObjects</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadObject">MReadObject</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadReaderById">MReadReaderById</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadSlot">MReadSlot</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReleaseSemaphore">MReleaseSemaphore</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRequestExceptionWithoutResponse">M<wbr>Request<wbr>Exception<wbr>Without<wbr>Response</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRequestExceptionWithResponse">M<wbr>Request<wbr>Exception<wbr>With<wbr>Response</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRollback">MRollback</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRuntimeException">MRuntimeException</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSetSemaphore">MSetSemaphore</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgBlob">MsgBlob</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgObject">MsgObject</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgQuery">MsgQuery</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSuccess">MSuccess</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSwitchToFile">MSwitchToFile</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSwitchToMainFile">MSwitchToMainFile</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MTaDelete">MTaDelete</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MTaIsDeleted">MTaIsDeleted</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MUseDefaultTransactionTimestamp">M<wbr>Use<wbr>Default<wbr>Transaction<wbr>Timestamp</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MUserMessage">MUserMessage</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MUseTransaction">MUseTransaction</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MVersion">MVersion</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MVersionForId">MVersionForId</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteBatchedMessages">M<wbr>Write<wbr>Batched<wbr>Messages</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteBlob">MWriteBlob</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteNew">MWriteNew</a></li>
+				<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteUpdate">MWriteUpdate</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>MLogin <small>Class</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Db4objects.Db4o.CS-2010.dll">Db4objects<wbr>.Db4o<wbr>.CS-2010<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Db4objects.Db4o.CS.Internal.Messages">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Messages</a></dd>
+											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>ICloneable</li>								
+											<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessage">IMessage</a></li>								
+											<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessageWithResponse">IMessageWithResponse</a></li>								
+									</ul>
+								</dd>
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>Object</li>								
+											<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></li>								
+											<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph BT
+	Type--&gt;Base0["MsgD"]
+	click Base0 "/api/Db4objects.Db4o.CS.Internal.Messages/MsgD"
+	Base0--&gt;Base1["Msg"]
+	click Base1 "/api/Db4objects.Db4o.CS.Internal.Messages/Msg"
+	Base1--&gt;Base2["Object"]
+	Type-.-&gt;Interface0["ICloneable"]
+	Type-.-&gt;Interface1["IMessage"]
+	click Interface1 "/api/Db4objects.Db4o.CS.Internal.Messages/IMessage"
+	Type-.-&gt;Interface2["IMessageWithResponse"]
+	click Interface2 "/api/Db4objects.Db4o.CS.Internal.Messages/IMessageWithResponse"
+	Type["MLogin"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public class MLogin : MsgD, ICloneable, IMessage, IMessageWithResponse</code></pre>
+
+
+
+
+
+
+
+
+
+			<h1 id="fields">Fields</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Constant Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/83E4F52B">ClassId</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/BFC45609">ClassMeta</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/87016619">Class<wbr>Metadata<wbr>Id<wbr>For<wbr>Name</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/79F69E48">ClassNameForId</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/D644C221">Close</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/6C66968E">CloseSocket</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/209C5FBD">Commit</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/11104769">CommitReplication</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/E6F84707">CommitSystemtrans</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/B46B9766">Committed<wbr>Callback<wbr>Register</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/AE047D0B">CommittedInfo</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/C46FF2DC">CreateClass</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/A6D76C8A">CurrentVersion</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/0ACE99C9">Delete</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/C7D6BB86">DeleteBlobFile</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/63791E6F">Error</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/FA11006D">Failed</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/0BD6B2FC">Generate<wbr>Transaction<wbr>Timestamp</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/150D231E">GetAll</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/6712499B">GetClasses</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/57211E74">GetInternalIds</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/49D2387D">GetThreadId</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/E92ED7C1">Identity</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/0B14BEC4">IdList</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/304A11DD">InstanceCount</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/425FD68A">IsAlive</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/3F2CF6F2">Length</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/020ECB98">Login</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/AB2ED639">LoginOk</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/630D623E">Null</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/41B0711C">ObjectByUuid</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/1CBFFBFB">ObjectsetFetch</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/5C23FA49">ObjectsetFinalized</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/AF1646A0">ObjectsetGetId</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/4542E67F">ObjectsetIndexof</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/12638F29">ObjectsetReset</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/63DFA439">ObjectsetSize</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/50DFABC8">ObjectToClient</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/EADD544A">Ok</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/D1CC7C3E">Ping</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/63B0F13A">Pong</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/CEA97E95">PrefetchIds</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/588BBD90">ProcessDeletes</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/640D8AF9">QueryExecute</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/5664C24C">QueryResult</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/BE9103C4">RaiseCommitTimestamp</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/77358867">ReadBlob</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/5ADEFDED">ReadBytes</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/2D4B23E8">ReadMultipleObjects</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/2C98935F">ReadObject</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/C447748C">ReadReaderById</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/DCB0F97B">ReadSlot</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/E6466023">ReleaseSemaphore</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/20315E2B">Request<wbr>Exception<wbr>Without<wbr>Response</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/46C28ECD">Request<wbr>Exception<wbr>With<wbr>Response</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/E3F99532">Rollback</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/23FC4790">RuntimeException</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/1935D42D">SetSemaphore</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/9DABFAFC">Success</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/2C86FF5D">SwitchToFile</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/32CC97EC">SwitchToMainFile</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/6D18C747">TaDelete</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/00C0A1DE">TaIsDeleted</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/7FA2CF89">Use<wbr>Default<wbr>Transaction<wbr>Timestamp</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/70419DC9">UserMessage</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/4394A393">UseTransaction</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/4C9C03E7">VersionForId</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/2947D959">WriteBatchedMessages</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/DF598C37">WriteBlob</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/D485BC90">WriteNew</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/2E4DC14D">WriteUpdate</a></td>
+								<td></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/1A1D8E76">Check<wbr>Parent<wbr>Transaction<wbr>(Transaction, <wbr>ByteArrayBuffer)<wbr></a></td>
+								<td>Transaction</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/4F539337">Client<wbr>Message<wbr>Dispatcher<wbr>()<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IClientMessageDispatcher">I<wbr>Client<wbr>Message<wbr>Dispatcher</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/9B877FCC">Config<wbr>()<wbr></a></td>
+								<td>Config4Impl</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/541A06C0">Container<wbr>()<wbr></a></td>
+								<td>ObjectContainerBase</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/55EF5DBF">ContainerLock<wbr>()<wbr></a></td>
+								<td>Object</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/A231759D">Equals<wbr>(Object)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/0560785C">GetByteLoad<wbr>()<wbr></a></td>
+								<td>ByteArrayBuffer</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/401F8FDC">GetByteLoad<wbr>()<wbr></a></td>
+								<td>ByteArrayBuffer</td>
+								<td>
+									<div>
+    dummy method to allow clean override handling
+    without casting
+    </div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/ADF1F8AE">GetHashCode<wbr>()<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/0984C5E2">GetMessage<wbr>(int)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/E376BDB2">GetWriter<wbr>(StatefulBuffer)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/C0124887">GetWriter<wbr>(Transaction)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/46B4260E">GetWriterForBuffer<wbr>(Transaction, <wbr>ByteArrayBuffer)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/EC55BD1F">GetWriterForByte<wbr>(Transaction, <wbr>byte)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/0AD86416">GetWriterForInt<wbr>(Transaction, <wbr>int)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/4F78086A">GetWriterForIntArray<wbr>(Transaction, <wbr>int[], <wbr>int)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/6273566E">GetWriterForInts<wbr>(Transaction, <wbr>int[])<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/D04BED11">Get<wbr>Writer<wbr>For<wbr>Int<wbr>Sequence<wbr>(Transaction, <wbr>int, <wbr>IEnumerator)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/6EC70A1E">Get<wbr>Writer<wbr>For<wbr>Int<wbr>String<wbr>(Transaction, <wbr>int, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/3697869C">GetWriterForLength<wbr>(Transaction, <wbr>int)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/307220E6">GetWriterForLong<wbr>(Transaction, <wbr>long)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/8176F550">GetWriterForLongs<wbr>(Transaction, <wbr>long[])<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/E879F953">Get<wbr>Writer<wbr>For<wbr>Single<wbr>Object<wbr>(Transaction, <wbr>Object)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/5FABAE5C">GetWriterForString<wbr>(Transaction, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/D8E49910">LocalContainer<wbr>()<wbr></a></td>
+								<td>LocalObjectContainer</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/EBA34548">LogMsg<wbr>(int, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/1D9E1BAC">MessageDispatcher<wbr>()<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessageDispatcher">IMessageDispatcher</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/ACB318C0">PayLoad<wbr>()<wbr></a></td>
+								<td>StatefulBuffer</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/584768DC">PayLoad<wbr>()<wbr></a></td>
+								<td>StatefulBuffer</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/655178BE">PayLoad<wbr>(StatefulBuffer)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/5DC1E1F9">PostProcessAtServer<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>to be overridden by implementors of MessageWithResponse</div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/51F3EB28">PublicClone<wbr>()<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/C4BC229E">ReadBoolean<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/6B382D65">ReadBytes<wbr>()<wbr></a></td>
+								<td>byte[]</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/F88DEF5F">ReadInt<wbr>()<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/0BEEDC34">ReadLong<wbr>()<wbr></a></td>
+								<td>long</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/840E9FEF">ReadMessage<wbr>(<wbr>I<wbr>Message<wbr>Dispatcher, <wbr>Transaction, <wbr>Socket4Adapter)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/6CCCF53C">ReadMessageBuffer<wbr>(Transaction, <wbr>Socket4Adapter, <wbr>int)<wbr></a></td>
+								<td>StatefulBuffer</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/C11A8A1A">ReadMessageBuffer<wbr>(Transaction, <wbr>Socket4Adapter)<wbr></a></td>
+								<td>StatefulBuffer</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/3E9B493C">Read<wbr>Object<wbr>From<wbr>Pay<wbr>Load<wbr>()<wbr></a></td>
+								<td>Object</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/66BDBA8C">ReadSingleObject<wbr>()<wbr></a></td>
+								<td>Object</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/B551D638">ReadString<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLogin/747B7456">ReplyFromServer<wbr>()<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/01ED0930">RespondInt<wbr>(int)<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/FCCF6666">Server<wbr>Message<wbr>Dispatcher<wbr>()<wbr></a></td>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IServerMessageDispatcher">I<wbr>Server<wbr>Message<wbr>Dispatcher</a></td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/93BA9182">ServerTransaction<wbr>()<wbr></a></td>
+								<td>LocalTransaction</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/A0375272">SetMessageDispatcher<wbr>(IMessageDispatcher)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/BF7BE948">SetTransaction<wbr>(Transaction)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/0D3A8DE5">SystemTransaction<wbr>()<wbr></a></td>
+								<td>Transaction</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/373C24D1">ToString<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/96060851">Transaction<wbr>()<wbr></a></td>
+								<td>Transaction</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/FE6A594B">Write<wbr>(Msg)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/91AF17CE">Write<wbr>(Socket4Adapter)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/07281B42">WriteBytes<wbr>(byte[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg/89478133">WriteException<wbr>(Exception)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/0639A45F">WriteInt<wbr>(int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/C059A52D">WriteLong<wbr>(long)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD/5A139776">WriteString<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+											<div><small><em>Inherited from <a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

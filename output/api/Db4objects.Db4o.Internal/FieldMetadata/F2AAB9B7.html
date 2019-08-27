@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>DB4O GPL API Documentation - API - FieldMetadata.CollectIDs(CollectIdContext) Method</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>DB4O GPL API Documentation</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Db4objects.Db4o-2010.dll">Db4objects<wbr>.Db4o-2010<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Db4objects.Db4o.Internal">Db4objects<wbr>.Db4o<wbr>.Internal</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata">FieldMetadata</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/C3AFFEAA">FieldMetadata<wbr>(ClassMetadata)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/471319A2">FieldMetadata<wbr>(int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/0653093F">FieldMetadata<wbr>(ClassMetadata, <wbr>string, <wbr>int, <wbr>bool, <wbr>bool, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/949952B6">FieldMetadata<wbr>(ClassMetadata, <wbr>string)<wbr></a></li>
+			<li class="header">Field Members</li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/EDDE4A56">_fieldType</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/0247689B">_fieldTypeID</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/5FF1D87A">_handle</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/8BB8EAAC">_isArray</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/8CB24519">Activate<wbr>(<wbr>Unmarshalling<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/02060421">AddFieldIndex<wbr>(<wbr>Object<wbr>Id<wbr>Context<wbr>Impl)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/5F65AA35">AddIndexEntry<wbr>(StatefulBuffer, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/ACACD6D6">AddIndexEntry<wbr>(Transaction, <wbr>int, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/74653F13">Alive<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/F6F64819">AspectType<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/2FFF13F7">AttemptUpdate<wbr>(<wbr>Unmarshalling<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D32BA0E8">CanBeDisabled<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/CCFF8960">CanLoadByIndex<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/BC023ECF">CanUpdateFast<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/4516696C">CanUseNullBitmap<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/ADB8850A">CascadeActivation<wbr>(IActivationContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D308E2C5">CascadingTarget<wbr>(IActivationContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/AF61D8BF">CheckEnabled<wbr>(<wbr>I<wbr>Aspect<wbr>Version<wbr>Context, <wbr>I<wbr>Handler<wbr>Version<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/14334D0F">Coerce<wbr>(IReflectClass, <wbr>Object)<wbr></a></li>
+				<li class="selected"><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/F2AAB9B7">CollectIDs<wbr>(CollectIdContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/8F4D1528">Container<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/323656A7">ContainingClass<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/787F5BF2">CreateFieldIndexKey<wbr>(int, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/A096CA29">CreateIndex<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/79C50954">Deactivate<wbr>(IActivationContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/61A377A6">DefragAspect<wbr>(IDefragmentContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/C8AF537A">Delete<wbr>(DeleteContextImpl, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/A97F69F5">Disable<wbr>From<wbr>Aspect<wbr>Count<wbr>Version<wbr>(int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/379570FF">DropIndex<wbr>(LocalTransaction)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/AA7D0817">DropIndex<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/FF71A9AC">Equals<wbr>(Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/61ACC12E">FieldType<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/DEF855B2">FieldTypeID<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/2236BF3F">Get<wbr>(Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/4D5E671E">Get<wbr>(Transaction, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/2D3F94D8">GetHandler<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/3DC13B39">GetHashCode<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/DB99DA73">GetIndex<wbr>(Transaction)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/8BE7E034">GetName<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/770BC278">GetOn<wbr>(Transaction, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/219E402E">GetOrCreate<wbr>(Transaction, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/37922447">GetStoredType<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/FC77204D">HasConfig<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/025D7A23">HasIndex<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/32080E3C">IncrementOffset<wbr>(IReadBuffer, <wbr>I<wbr>Handler<wbr>Version<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D3796734">IndexEntryFor<wbr>(Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/530F343A">IndexHandler<wbr>(<wbr>Object<wbr>Container<wbr>Base)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/7E7AE2BD">Init<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/B65BC33A">Init<wbr>(string, <wbr>int, <wbr>bool, <wbr>bool, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/B7EDB3A5">InitIndex<wbr>(Transaction, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D503B8C4">IsArray<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/C74DD034">IsEnabledOn<wbr>(<wbr>I<wbr>Aspect<wbr>Version<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/CB4F3BAC">IsPrimitive<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/A6CA6F16">IsVirtual<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/F365912F">LinkLength<wbr>(<wbr>I<wbr>Handler<wbr>Version<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/EBB221A1">LoadFieldTypeById<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/9F4C92DE">Marshall<wbr>(<wbr>Marshalling<wbr>Context, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/67C0645E">Needs<wbr>Array<wbr>And<wbr>Primitive<wbr>Info<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/FF5AFB07">NewBTree<wbr>(Transaction, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/5D816291">PrepareComparison<wbr>(IContext, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/4F56BEFD">QField<wbr>(Transaction)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/20F71374">Read<wbr>(IObjectIdContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D3387358">ReadIndexEntry<wbr>(IObjectIdContext)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/96273CE7">RebuildIndexForClass<wbr>(<wbr>Local<wbr>Object<wbr>Container, <wbr>ClassMetadata)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D83C2263">Rebuild<wbr>Index<wbr>For<wbr>Object<wbr>(<wbr>Local<wbr>Object<wbr>Container, <wbr>ClassMetadata, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/3DA25AE8">Rebuild<wbr>Index<wbr>For<wbr>Writer<wbr>(<wbr>Local<wbr>Object<wbr>Container, <wbr>StatefulBuffer, <wbr>int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/6C4167AF">Reflector<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D87DA41E">RemoveIndexEntry<wbr>(Transaction, <wbr>int, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/2E3FA4AD">Rename<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/8FA01BDC">Search<wbr>(Transaction, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/40E5DEDE">Set<wbr>(Object, <wbr>Object)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/3F03542F">SetAvailable<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect/4576E1CE">SetHandle<wbr>(int)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/70D4A77A">ToString<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/EA5FE47C">Translator<wbr>Stored<wbr>Class<wbr>(IObjectTranslator)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/9C06F97D">TraverseValues<wbr>(IVisitor4)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/810C8763">TraverseValues<wbr>(Transaction, <wbr>IVisitor4)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/D06B9212">TypeHandlerForClass<wbr>(<wbr>Object<wbr>Container<wbr>Base, <wbr>IReflectClass)<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/F2488FB3">Updating<wbr>()<wbr></a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata/470186FD">WrapHandlerToArrays<wbr>(ITypeHandler4)<wbr></a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+			<h3><a href="/api/Db4objects.Db4o.Internal/FieldMetadata">FieldMetadata</a>.</h3>
+	<h1>CollectIDs<wbr>(CollectIdContext)<wbr> <small>Method</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Db4objects.Db4o-2010.dll">Db4objects<wbr>.Db4o-2010<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Db4objects.Db4o.Internal">Db4objects<wbr>.Db4o<wbr>.Internal</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Db4objects.Db4o.Internal/FieldMetadata">FieldMetadata</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public override sealed void CollectIDs(CollectIdContext context)</code></pre>
+
+
+
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>context</td>
+						<td><a href="/api/Db4objects.Db4o.Internal.Marshall/CollectIdContext">CollectIdContext</a></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

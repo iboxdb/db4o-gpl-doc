@@ -1,0 +1,4588 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>DB4O GPL API Documentation - API - Db4objects.Db4o-2010.dll Assembly</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>DB4O GPL API Documentation</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+<p><a href="#DelegateTypes">Delegate Types</a></p>
+<p><a href="#EnumTypes">Enum Types</a></p>
+<p><a href="#InterfaceTypes">Interface Types</a></p>
+<p><a href="#StructTypes">Struct Types</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+	<li class="header">Assemblies</li>   
+        <li class="selected"><a href="/api/Db4objects.Db4o-2010.dll">Db4objects<wbr>.Db4o-2010<wbr>.dll</a></li>
+        <li><a href="/api/Db4objects.Db4o.CS-2010.dll">Db4objects<wbr>.Db4o<wbr>.CS-2010<wbr>.dll</a></li>
+        <li><a href="/api/Db4objects.Db4o.Linq-2010.dll">Db4objects<wbr>.Db4o<wbr>.Linq-2010<wbr>.dll</a></li>
+        <li><a href="/api/Db4odoc.Tutorial.Chapters-2010.dll">Db4odoc<wbr>.Tutorial<wbr>.Chapters-2010<wbr>.dll</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>Db4objects<wbr>.Db4o-2010<wbr>.dll <small>Assembly</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+
+			<h1 id="ClassTypes">Class Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Class</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/AbstractBTreeRangeIterator">Abstract<wbr>B<wbr>Tree<wbr>Range<wbr>Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/AbstractBufferContext">Abstract<wbr>Buffer<wbr>Context</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Classindex/AbstractClassIndexStrategy">Abstract<wbr>Class<wbr>Index<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/AbstractFieldMarshaller">Abstract<wbr>Field<wbr>Marshaller</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/AbstractFreespaceManager">Abstract<wbr>Freespace<wbr>Manager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/AbstractIdMapping">AbstractIdMapping</a></td>
+									<td>Base class for defragment ID mappings.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/AbstractLateQueryResult">Abstract<wbr>Late<wbr>Query<wbr>Result</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/AbstractQueryResult">AbstractQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/AbstractReadContext">AbstractReadContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/AbstractReflectArray">AbstractReflectArray</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/AbstractTreeIterator">AbstractTreeIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/ActivatableBase">ActivatableBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/ActivatableDictionary_2">Activatable<wbr>Dictionary</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Collections/ActivatableDictionary_2#typeparam-TKey">TKey</a>, <wbr><a href="/api/Db4objects.Db4o.Collections/ActivatableDictionary_2#typeparam-TValue">TValue</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/ActivatableList_1">ActivatableList</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Collections/ActivatableList_1#typeparam-T">T</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/ActivationContext4">ActivationContext4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/ActivationDepthImpl">ActivationDepthImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/ActivationMode">ActivationMode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/AddressKeySlotHandler">Address<wbr>Key<wbr>Slot<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Algorithms4">Algorithms4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/AndIndexedLeaf">AndIndexedLeaf</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/ArrayDictionary4_2">ArrayDictionary4</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Collections/ArrayDictionary4_2#typeparam-K">K</a>, <wbr><a href="/api/Db4objects.Db4o.Collections/ArrayDictionary4_2#typeparam-V">V</a>&gt;<wbr></td>
+									<td>Transparent activatable IDictionary implementation.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayHandler">ArrayHandler</a></td>
+									<td>This is the latest version, the one that should be used.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayHandler0">ArrayHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayHandler1">ArrayHandler1</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayHandler3">ArrayHandler3</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayHandler5">ArrayHandler5</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/ArrayInfo">ArrayInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ArrayIterator4">ArrayIterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/ArrayList4_1">ArrayList4</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Collections/ArrayList4_1#typeparam-E">E</a>&gt;<wbr></td>
+									<td>Transparent activatable ArrayList implementation.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Util/Arrays">Arrays</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Arrays4">Arrays4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ArrayType">ArrayType</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/ArrayTypeReference">ArrayTypeReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayVersionHelper">ArrayVersionHelper</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayVersionHelper0">ArrayVersionHelper0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayVersionHelper3">ArrayVersionHelper3</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/ArrayVersionHelper5">ArrayVersionHelper5</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/AspectType">AspectType</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/AspectVersionContextImpl">Aspect<wbr>Version<wbr>Context<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/AutoStopWatch">AutoStopWatch</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/AvailableTypeFilter">AvailableTypeFilter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/BackupInProgressException">Backup<wbr>In<wbr>Progress<wbr>Exception</a></td>
+									<td>db4o-specific exception.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Collections/BigSet_1">BigSet</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Internal.Collections/BigSet_1#typeparam-E">E</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Collections/BigSetBTreeManager">BigSetBTreeManager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Collections/BigSetTypeHandler">BigSetTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/BinConfiguration">BinConfiguration</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/BinDecorator">BinDecorator</a></td>
+									<td>Wrapper baseclass for all classes that wrap Bin.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BitMap4">BitMap4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/BlobImpl">BlobImpl</a></td>
+									<td>
+    Transfer of blobs to and from the db4o system,
+    if users use the Blob Db4oType.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/BlockAwareBin">BlockAwareBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/BlockAwareBinWindow">BlockAwareBinWindow</a></td>
+									<td>Bounded handle into an IoAdapter: Can only access a restricted area.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/BlockAwareFreespaceManager">Block<wbr>Aware<wbr>Freespace<wbr>Manager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BlockingQueue">BlockingQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BlockingQueueStoppedException">Blocking<wbr>Queue<wbr>Stopped<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/BlockSizeBlockConverter">Block<wbr>Size<wbr>Block<wbr>Converter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.IO/BlockSizeImpl">BlockSizeImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BooleanByRef">BooleanByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/BooleanHandler">BooleanHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTree">BTree</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeAdd">BTreeAdd</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeCancelledRemoval">B<wbr>Tree<wbr>Cancelled<wbr>Removal</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Classindex/BTreeClassIndexStrategy">B<wbr>Tree<wbr>Class<wbr>Index<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeConfiguration">BTreeConfiguration</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/BTreeFreespaceManager">B<wbr>Tree<wbr>Freespace<wbr>Manager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/BTreeIdSystem">BTreeIdSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/IdSlotMappingHandler">BTreeIdSystem<wbr>.<wbr>Id<wbr>Slot<wbr>Mapping<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeIterator">BTreeIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeNode">BTreeNode</a></td>
+									<td>
+    We work with BTreeNode in two states:
+    - deactivated: never read, no valid members, ID correct or 0 if new
+    - write: real representation of keys, values and children in arrays
+    The write state can be detected with canWrite().
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeNodeCacheEntry">BTreeNodeCacheEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeNodeSearchResult">B<wbr>Tree<wbr>Node<wbr>Search<wbr>Result</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreePatch">BTreePatch</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreePointer">BTreePointer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeOperation">BTreeRangeOperation</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeRangePointerIterator">B<wbr>Tree<wbr>Range<wbr>Pointer<wbr>Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeRangeSingle">BTreeRangeSingle</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeSingleIntersect">B<wbr>Tree<wbr>Range<wbr>Single<wbr>Intersect</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeSingleOperation">B<wbr>Tree<wbr>Range<wbr>Single<wbr>Operation</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeSingleUnion">B<wbr>Tree<wbr>Range<wbr>Single<wbr>Union</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeRangeUnion">BTreeRangeUnion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeUnionIntersect">B<wbr>Tree<wbr>Range<wbr>Union<wbr>Intersect</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeUnionOperation">B<wbr>Tree<wbr>Range<wbr>Union<wbr>Operation</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra/BTreeRangeUnionUnion">BTreeRangeUnionUnion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeRemove">BTreeRemove</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/BTreeUpdate">BTreeUpdate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/BufferedInputStream">BufferedInputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/BufferedOutputStream">BufferedOutputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/BuiltInStringEncoding">Built<wbr>In<wbr>String<wbr>Encoding</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ByRef">ByRef</a></td>
+									<td>Useful as "out" or "by reference" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ByteArrayBuffer">ByteArrayBuffer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/ByteArrayInputStream">ByteArrayInputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/ByteArrayOutputStream">Byte<wbr>Array<wbr>Output<wbr>Stream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/ByteHandler">ByteHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Config/CacheConfigurationImpl">Cache<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Caching/CacheFactory">CacheFactory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Caching/CacheStatistics">CacheStatistics</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/CachingStorage">CachingStorage</a></td>
+									<td>
+    Caching storage adapter to cache db4o database data in memory
+    until the underlying
+    <code class="cs">Db4objects.Db4o.IO.IBin</code>
+    is instructed to flush its
+    data when
+    <code class="cs">Db4objects.Db4o.IO.IBin.Sync</code>
+    is called.<br><br>
+    You can override the
+    <code class="cs">Db4objects.Db4o.IO.CachingStorage.NewCache</code>
+    method if you want to
+    work with a different caching strategy.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/CallBackMode">CallBackMode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/CallbackObjectInfoCollections">Callback<wbr>Object<wbr>Info<wbr>Collections</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/CancellableObjectEventArgs">Cancellable<wbr>Object<wbr>Event<wbr>Args</a></td>
+									<td>Argument for object related events which can be cancelled.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/CharHandler">CharHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CircularBuffer4">CircularBuffer4</a></td>
+									<td>A fixed size double ended queue with O(1) complexity for addFirst, removeFirst and removeLast operations.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CircularIntBuffer4">CircularIntBuffer4</a></td>
+									<td>A fixed size double ended queue with O(1) complexity for addFirst, removeFirst and removeLast operations.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CircularLongBuffer4">CircularLongBuffer4</a></td>
+									<td>A fixed size double ended queue with O(1) complexity for addFirst, removeFirst and removeLast operations.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ClassAspect">ClassAspect</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/ClassAspects_7_4">ClassAspects_7_4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/ClassEventArgs">ClassEventArgs</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/ClassHasNoFields">ClassHasNoFields</a></td>
+									<td>Diagnostic, if class has no fields.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/ClassIndexesToBTrees_5_5">Class<wbr>Indexes<wbr>To<wbr>B<wbr>Trees_5_5</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ClassMarshaller">ClassMarshaller</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ClassMarshaller0">ClassMarshaller0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ClassMarshaller1">ClassMarshaller1</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ClassMarshaller2">ClassMarshaller2</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ClassMetadata">ClassMetadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ClassMetadataIterator">Class<wbr>Metadata<wbr>Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ClassMetadataRepository">Class<wbr>Metadata<wbr>Repository</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Coercion4">Coercion4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/CollectIdContext">CollectIdContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Collection4">Collection4</a></td>
+									<td>Fast linked list for all usecases.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Collection4Iterator">Collection4Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/CollectionFactory">CollectionFactory</a></td>
+									<td>
+    Collection factory with methods to create collections with behaviour
+    that is optimized for db4o.<br><br>
+    Example usage:<br>
+    <pre><code class="cs">CollectionFactory.forObjectContainer(objectContainer).newBigSet();</code></pre>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation.Collections/CollectionInitializer">Collection<wbr>Initializer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen/Collections">Collections</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Collections4">Collections4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/CollectionTypeHandler">Collection<wbr>Type<wbr>Handler</a></td>
+									<td>TypeHandler for Collections.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/CommitEventArgs">CommitEventArgs</a></td>
+									<td>Arguments for commit time related events.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/CommitTimestampFieldMetadata">Commit<wbr>Timestamp<wbr>Field<wbr>Metadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/CommitTimestampSupport">Commit<wbr>Timestamp<wbr>Support</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TimestampEntry">Commit<wbr>Timestamp<wbr>Support<wbr>.TimestampEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Config/CommonConfigurationImpl">Common<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/CommonConversions">CommonConversions</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Compat">Compat</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/CompositeDb4oException">Composite<wbr>Db4o<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CompositeIterable4">CompositeIterable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CompositeIterator4">CompositeIterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Config4Abstract">Config4Abstract</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Config4Class">Config4Class</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Config4Field">Config4Field</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Config4Impl">Config4Impl</a></td>
+									<td>Configuration template for creating new db4o files</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ConfigDeepCloneContext">Config4Impl<wbr>.<wbr>Config<wbr>Deep<wbr>Clone<wbr>Context</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ConfigScope">ConfigScope</a></td>
+									<td>
+    Defines a scope of applicability of a config setting.<br><br>
+    Some of the configuration settings can be either: <br><br>
+    - enabled globally; <br>
+    - enabled individually for a specified class; <br>
+    - disabled.<br><br>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Const4">Const4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/ConstantGrowthStrategy">Constant<wbr>Growth<wbr>Strategy</a></td>
+									<td>Strategy for file/byte array growth by a constant factor</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Constraints/ConstraintViolationException">Constraint<wbr>Violation<wbr>Exception</a></td>
+									<td>Base class for all constraint exceptions.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/ConstructorSupport">ConstructorSupport</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ContextState">ContextState</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert/Conversion">Conversion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert/ConversionStage">ConversionStage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert/ClassCollectionAvailableStage">ConversionStage<wbr>.<wbr>Class<wbr>Collection<wbr>Available<wbr>Stage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert/SystemUpStage">ConversionStage<wbr>.SystemUpStage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert/Converter">Converter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/CorruptionException">CorruptionException</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CRC32">CRC32</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/DatabaseClosedException">Database<wbr>Closed<wbr>Exception</a></td>
+									<td>db4o-specific exception.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/DatabaseFileLockedException">Database<wbr>File<wbr>Locked<wbr>Exception</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    this Exception is thrown during any of the db4o open calls
+    if the database file is locked by another process.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/DatabaseIdMapping">DatabaseIdMapping</a></td>
+									<td>Database based mapping for IDs during a defragmentation run.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/DatabaseMaximumSizeReachedException">Database<wbr>Maximum<wbr>Size<wbr>Reached<wbr>Exception</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when the database file reaches the
+    maximum allowed size.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/DatabaseReadOnlyException">Database<wbr>Read<wbr>Only<wbr>Exception</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when a write operation is attempted
+    on a database in a read-only mode.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DateHandler">DateHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DateHandler0">DateHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DateHandlerBase">DateHandlerBase</a></td>
+									<td>Shared (java/.net) logic for Date handling.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DateTimeHandler">DateTimeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/DateTimeOffsetTypeHandler">Date<wbr>Time<wbr>Offset<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oDatabase">Db4oDatabase</a></td>
+									<td>Class to identify a database by it's signature.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Db4oEmbedded">Db4oEmbedded</a></td>
+									<td>Factory class to open db4o instances in embedded
+    mode.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oException">Db4oException</a></td>
+									<td>
+    db4o exception wrapper: Exceptions occurring during internal processing
+    will be proliferated to the client calling code encapsulated in an exception
+    of this type.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Db4oFactory">Db4oFactory</a></td>
+									<td>factory class to start db4o database engines.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oFatalException">Db4oFatalException</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oFileHeaderCorruptionException">Db4o<wbr>File<wbr>Header<wbr>Corruption<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oIllegalStateException">Db4o<wbr>Illegal<wbr>State<wbr>Exception</a></td>
+									<td>
+    The requested operation is not valid in the current state but the database
+    continues to operate.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oIOException">Db4oIOException</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when a system IO exception
+    is encounted by db4o process.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Config/Db4oLegacyConfigurationBridge">Db4o<wbr>Legacy<wbr>Configuration<wbr>Bridge</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oRecoverableException">Db4o<wbr>Recoverable<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oUnexpectedException">Db4o<wbr>Unexpected<wbr>Exception</a></td>
+									<td>Unexpected fatal error is encountered.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Db4oUUID">Db4oUUID</a></td>
+									<td>a unique universal identify for an object.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Db4oVersion">Db4oVersion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.TA/DeactivatingRollbackStrategy">Deactivating<wbr>Rollback<wbr>Strategy</a></td>
+									<td>RollbackStrategy to deactivate all activated objects on rollback.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Debug4">Debug4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Text/DecimalFormat">DecimalFormat</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DecimalHandler">DecimalHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/Defragment">Defragment</a></td>
+									<td>defragments database files.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/DefragmentConfig">DefragmentConfig</a></td>
+									<td>Configuration for a defragmentation run.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/NullFilter">DefragmentConfig<wbr>.NullFilter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/DefragmentContextImpl">Defragment<wbr>Context<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/DefragmentInfo">DefragmentInfo</a></td>
+									<td>A message from the defragmentation process.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DefragmentRecommendation">Defragment<wbr>Recommendation</a></td>
+									<td>Diagnostic to recommend Defragment when needed.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DefragmentRecommendationReason">Defragment<wbr>Recommendation<wbr>.<wbr>Defragment<wbr>Recommendation<wbr>Reason</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/DefragmentServicesImpl">Defragment<wbr>Services<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/DbSelector">Defragment<wbr>Services<wbr>Impl<wbr>.DbSelector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/DelegatingBlockingQueue">Delegating<wbr>Blocking<wbr>Queue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/DelegatingStringIO">DelegatingStringIO</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Delete/DeleteContextImpl">DeleteContextImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/DeleteInfo">DeleteInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DeletionFailed">DeletionFailed</a></td>
+									<td>Diagnostic on failed delete.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Deploy">Deploy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/DepthUtil">DepthUtil</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/DescendingActivationDepth">Descending<wbr>Activation<wbr>Depth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DescendIntoTranslator">Descend<wbr>Into<wbr>Translator</a></td>
+									<td>
+    Query tries to descend into a field of a class that is configured to be translated
+    (and thus cannot be descended into).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DiagnosticBase">DiagnosticBase</a></td>
+									<td>base class for Diagnostic messages</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Diagnostic/DiagnosticProcessor">DiagnosticProcessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DiagnosticToConsole">DiagnosticToConsole</a></td>
+									<td>prints Diagnostic messsages to the Console.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/DiagnosticToTrace">DiagnosticToTrace</a></td>
+									<td>prints Diagnostic messsages to the Console.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/DisabledBlockConverter">Disabled<wbr>Block<wbr>Converter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DoubleHandler">DoubleHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/DoubleHandler0">DoubleHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/DoublingGrowthStrategy">Doubling<wbr>Growth<wbr>Strategy</a></td>
+									<td>Strategy for file/byte array growth that will always double the current size
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/DropClassIndexesConversion">Drop<wbr>Class<wbr>Indexes<wbr>Conversion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/DropDateTimeOffsetClassIndexes_7_12">Drop<wbr>Date<wbr>Time<wbr>Offset<wbr>Class<wbr>Indexes_7_12</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/DropEnumClassIndexes_7_10">Drop<wbr>Enum<wbr>Class<wbr>Indexes_7_10</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/DropGuidClassAndFieldIndexes_7_12">Drop<wbr>Guid<wbr>Class<wbr>And<wbr>Field<wbr>Indexes_7_12</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/DTrace">DTrace</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Dynamic">Dynamic</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/DynamicVariable">DynamicVariable</a></td>
+									<td>A dynamic variable is a value associated to a specific thread and scope.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Config/EmbeddedConfigurationImpl">Embedded<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Transactionlog/EmbeddedTransactionLogHandler">Embedded<wbr>Transaction<wbr>Log<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/EmergencyShutdownReadOnlyException">Emergency<wbr>Shutdown<wbr>Read<wbr>Only<wbr>Exception</a></td>
+									<td>
+    A previous IO exception has switched the database file
+    to read-only mode for controlled shutdown.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/Entry">Entry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/EnumerateIterator">EnumerateIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Tuple">EnumerateIterator<wbr>.Tuple</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/EnumTypeHandler">EnumTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/EnumTypeHandlerPredicate">Enum<wbr>Type<wbr>Handler<wbr>Predicate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Environments">Environments</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/EventDispatchers">EventDispatchers</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/EventException">EventException</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    Exception thrown during event dispatching if a client
+    provided event handler throws.<br><br>
+    The exception thrown by the client can be retrieved by
+    calling EventException.InnerException.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/EventRegistryFactory">EventRegistryFactory</a></td>
+									<td>
+    Provides an interface for getting an
+    <code class="cs">Db4objects.Db4o.Events.IEventRegistry</code>
+    from an
+    <code class="cs">Db4objects.Db4o.IObjectContainer</code>
+    .
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Events/EventRegistryImpl">EventRegistryImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Exceptions4">Exceptions4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ExternalObjectContainer">External<wbr>Object<wbr>Container</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/FieldIndexesToBTrees_5_7">Field<wbr>Indexes<wbr>To<wbr>B<wbr>Trees_5_7</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/FieldIndexException">FieldIndexException</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/FieldIndexKeyHandler">FieldIndexKeyHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/FieldIndexKeyImpl">FieldIndexKeyImpl</a></td>
+									<td>
+    Composite key for field indexes, first compares on the actual
+    indexed field _value and then on the _parentID (which is a
+    reference to the containing object).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/FieldIndexProcessor">FieldIndexProcessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/FieldIndexProcessorResult">Field<wbr>Index<wbr>Processor<wbr>Result</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/FieldMarshaller0">FieldMarshaller0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/FieldMarshaller1">FieldMarshaller1</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/FieldMarshaller2">FieldMarshaller2</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/FieldMetadata">FieldMetadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/FieldReindexer_1">FieldReindexer</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/FieldReindexer_1#typeparam-T">T</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/File">File</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation.IO/File4">File4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Transactionlog/FileBasedTransactionLogHandler">File<wbr>Based<wbr>Transaction<wbr>Log<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeader">FileHeader</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeader1">FileHeader1</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeader2">FileHeader2</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeader3">FileHeader3</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeaderVariablePart">File<wbr>Header<wbr>Variable<wbr>Part</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeaderVariablePart1">File<wbr>Header<wbr>Variable<wbr>Part1</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeaderVariablePart2">File<wbr>Header<wbr>Variable<wbr>Part2</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/FileHeaderVariablePart3">File<wbr>Header<wbr>Variable<wbr>Part3</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/FileInputStream">FileInputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/FileOutputStream">FileOutputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/FileStorage">FileStorage</a></td>
+									<td>
+    Storage adapter to store db4o database data to physical
+    files on hard disc.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/FileBin">FileStorage<wbr>.FileBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/FilteredIterator">FilteredIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/FirstPassCommand">FirstPassCommand</a></td>
+									<td>
+    First step in the defragmenting process: Allocates pointer slots in the target file for
+    each ID (but doesn't fill them in, yet) and registers the mapping from source pointer address
+    to target pointer address.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/FixedActivationDepth">FixedActivationDepth</a></td>
+									<td>
+    Activates a fixed depth of the object graph regardless of
+    any existing activation depth configuration settings.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/FixedUpdateDepth">FixedUpdateDepth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/FlatteningIterator">FlatteningIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/FloatHandler">FloatHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/FloatHandler0">FloatHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/FreeSlotNode">FreeSlotNode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/FreespaceCommitter">FreespaceCommitter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/FreespaceManagerIx">FreespaceManagerIx</a></td>
+									<td>Old freespacemanager, before version 7.0.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/FreespaceSlotChange">FreespaceSlotChange</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/FrozenObjectInfo">FrozenObjectInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/FullActivationDepth">FullActivationDepth</a></td>
+									<td>Activates the full object graph.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/FunctionApplicationIterator">Function<wbr>Application<wbr>Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericArray">GenericArray</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericArrayClass">GenericArrayClass</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericArrayReflector">Generic<wbr>Array<wbr>Reflector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericClass">GenericClass</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericClassBuilder">GenericClassBuilder</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/GenericCollectionTypeHandler">Generic<wbr>Collection<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericField">GenericField</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericObject">GenericObject</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/GenericObjectSetFacade_1">Generic<wbr>Object<wbr>Set<wbr>Facade</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Internal.Query/GenericObjectSetFacade_1#typeparam-T">T</a>&gt;<wbr></td>
+									<td>
+    List based objectSet implementation
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericReflector">GenericReflector</a></td>
+									<td>
+    db4o provides GenericReflector as a wrapper around specific
+    reflector (delegate).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.native.Db4objects.Db4o.Internal/GenericTypeHandlerPredicate">Generic<wbr>Type<wbr>Handler<wbr>Predicate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/GenericTypeReference">GenericTypeReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/GenericVirtualField">GenericVirtualField</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/GlobalOnlyConfigException">Global<wbr>Only<wbr>Config<wbr>Exception</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when a global configuration
+    setting is attempted on an open object container.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/GuidTypeHandler">GuidTypeHandler</a></td>
+									<td>
+    DB4O type handler for efficiently storing and activating System.Guid values.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/HandlerRegistry">HandlerRegistry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Handlers4">Handlers4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/HandlerVersion">HandlerVersion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/HandlerVersionRegistry">Handler<wbr>Version<wbr>Registry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/HardObjectReference">HardObjectReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.References/HashcodeReferenceSystem">Hashcode<wbr>Reference<wbr>System</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Util/HashSet">HashSet</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashSet4">HashSet4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Hashtable4">Hashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableBase">HashtableBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableIdentityEntry">Hashtable<wbr>Identity<wbr>Entry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableIntEntry">HashtableIntEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableIterator">HashtableIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableLongEntry">HashtableLongEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableObjectEntry">HashtableObjectEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/HierarchyAnalyzer">HierarchyAnalyzer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/Diff">HierarchyAnalyzer<wbr>.Diff</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/Removed">HierarchyAnalyzer<wbr>.Removed</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/Same">HierarchyAnalyzer<wbr>.Same</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/HybridQueryResult">HybridQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Identifiable">Identifiable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/IdentityHashCodeProvider">Identity<wbr>Hash<wbr>Code<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IdentityHashtable4">IdentityHashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IdentityEntry">IdentityHashtable4<wbr>.IdentityEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IdentitySet4">IdentitySet4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IDGenerator">IDGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IDHandler">IDHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/IdListQueryResult">IdListQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/IDMappingCollector">IDMappingCollector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IdObjectCollector">IdObjectCollector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/IdSlotChanges">IdSlotChanges</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/IdSlotMapping">IdSlotMapping</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/IdSlotTree">IdSlotTree</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Mapping/IdSource">IdSource</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Config/IdSystemConfigurationImpl">Id<wbr>System<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/IdSystemSlotChange">IdSystemSlotChange</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/IdTreeQueryResult">IdTreeQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/IgnoreFieldsTypeHandler">Ignore<wbr>Fields<wbr>Type<wbr>Handler</a></td>
+									<td>Typehandler that ignores all fields on a class</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IllegalComparisonException">Illegal<wbr>Comparison<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IncompatibleFileFormatException">Incompatible<wbr>File<wbr>Format<wbr>Exception</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when the database file format
+    is not compatible with the applied configuration.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config.Attributes/IndexedAttribute">IndexedAttribute</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IndexedIterator">IndexedIterator</a></td>
+									<td>
+    Basic functionality for implementing iterators for
+    fixed length structures whose elements can be efficiently
+    accessed by a numeric index.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/IndexedLeaf">IndexedLeaf</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/IndexedNodeBase">IndexedNodeBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/IndexedNodeCollector">IndexedNodeCollector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/IndexedPath">IndexedPath</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/InMemoryFreespaceManager">In<wbr>Memory<wbr>Freespace<wbr>Manager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/InMemoryIdMapping">InMemoryIdMapping</a></td>
+									<td>In-memory mapping for IDs during a defragmentation run.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/InMemoryIdSystem">InMemoryIdSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/InputStream">InputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntArrayByRef">IntArrayByRef</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntArrayList">IntArrayList</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntByRef">IntByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/IntegralTypeHandler">IntegralTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/InterfaceTypeHandler">InterfaceTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/IntHandler">IntHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/PreparedIntComparison">IntHandler<wbr>.<wbr>Prepared<wbr>Int<wbr>Comparison</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/IntHandler0">IntHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIdGenerator">IntIdGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIterator4Adaptor">IntIterator4Adaptor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIterator4Impl">IntIterator4Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIterators">IntIterators</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IntMatcher">IntMatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/InvalidIDException">InvalidIDException</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when the supplied object ID
+    is incorrect (outside the scope of the database IDs).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/InvalidIteratorException">Invalid<wbr>Iterator<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/InvalidPasswordException">Invalid<wbr>Password<wbr>Exception</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when a client tries to connect
+    to a server with a wrong password or null password.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/InvalidSlotException">InvalidSlotException</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when db4o reads slot
+    information which is not valid (length or address).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IoAdaptedObjectContainer">Io<wbr>Adapted<wbr>Object<wbr>Container</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Iterable4Adaptor">Iterable4Adaptor</a></td>
+									<td>
+    Adapts Iterable4/Iterator4 iteration model (moveNext, current) to the old db4o
+    and jdk model (hasNext, next).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Iterator4Impl">Iterator4Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Iterators">Iterators</a></td>
+									<td>Iterator primitives (concat, map, reduce, filter, etc...).</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/JoinedLeaf">JoinedLeaf</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/KeySpec">KeySpec</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/KeySpecHashtable4">KeySpecHashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers.Internal/KeyValueHandlerPair">KeyValueHandlerPair</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Reflect.Generic/KnownClassesCollector">Known<wbr>Classes<wbr>Collector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/KnownClassesRepository">Known<wbr>Classes<wbr>Repository</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/LatinStringEncoding">LatinStringEncoding</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/LatinStringIO">LatinStringIO</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/LazyObjectReference">LazyObjectReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/LazyQueryResult">LazyQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/LegacyActivationDepth">Legacy<wbr>Activation<wbr>Depth</a></td>
+									<td>
+    Activates an object graph to a specific depth respecting any
+    activation configuration settings that might be in effect.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/LegacyActivationDepthProvider">Legacy<wbr>Activation<wbr>Depth<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/LegacyFixedUpdateDepth">Legacy<wbr>Fixed<wbr>Update<wbr>Depth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/LegacyUnspecifiedUpdateDepth">Legacy<wbr>Unspecified<wbr>Update<wbr>Depth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/LegacyUpdateDepthProvider">Legacy<wbr>Update<wbr>Depth<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/LengthKeySlotHandler">LengthKeySlotHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Reflect/LenientFieldAccessor">LenientFieldAccessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Logging/Level">Level</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/List4">List4</a></td>
+									<td>simplest possible linked list</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ListenerRegistry">ListenerRegistry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/LoadedFromClassIndex">LoadedFromClassIndex</a></td>
+									<td>Diagnostic, if query was required to load candidate set from class index.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/LocalObjectContainer">LocalObjectContainer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/LocalPersistentBase">LocalPersistentBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/LocalTransaction">LocalTransaction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Lock4">Lock4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/LockedTree">LockedTree</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Logging/Logger">Logger</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Logging/LoggingWrapper">LoggingWrapper</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/LongByRef">LongByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/LongHandler">LongHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/LongHandler0">LongHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Mapping/MappedIDPair">MappedIDPair</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Mapping/MappedIDPairHandler">MappedIDPairHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/MappingIterator">MappingIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Mapping/MappingNotFoundException">Mapping<wbr>Not<wbr>Found<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/MapTypeHandler">MapTypeHandler</a></td>
+									<td>Typehandler for classes that implement IDictionary.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/MarshallerFamily">MarshallerFamily</a></td>
+									<td>
+    Represents a db4o file format version, assembles all the marshallers
+    needed to read/write this specific version.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/FamilyVersion">MarshallerFamily<wbr>.FamilyVersion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/MarshallingBuffer">MarshallingBuffer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/MarshallingConstants0">Marshalling<wbr>Constants0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/MarshallingContext">MarshallingContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/MarshallingContextState">Marshalling<wbr>Context<wbr>State</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/MarshallingInfoTraverseAspectCommand">Marshalling<wbr>Info<wbr>Traverse<wbr>Aspect<wbr>Command</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/MemoryBin">MemoryBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/MemoryStorage">MemoryStorage</a></td>
+									<td>
+    <code class="cs">Db4objects.Db4o.IO.IStorage</code>
+    implementation that produces
+    <code class="cs">Db4objects.Db4o.IO.IBin</code>
+    instances
+    that operate in memory.
+    Use this
+    <code class="cs">Db4objects.Db4o.IO.IStorage</code>
+    to work with db4o as an in-memory database.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Messages">Messages</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/MissingClass">MissingClass</a></td>
+									<td>Diagnostic if class not found</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/ModifiedAspectTraversalStrategy">Modified<wbr>Aspect<wbr>Traversal<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/MultidimensionalArrayHandler">Multidimensional<wbr>Array<wbr>Handler</a></td>
+									<td>n-dimensional array</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/MultidimensionalArrayHandler0">Multidimensional<wbr>Array<wbr>Handler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/MultidimensionalArrayHandler3">Multidimensional<wbr>Array<wbr>Handler3</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/MultidimensionalArrayInfo">Multidimensional<wbr>Array<wbr>Info</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Array/MultidimensionalArrayIterator">Multidimensional<wbr>Array<wbr>Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/My_1">My</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Foundation/My_1#typeparam-TService">TService</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/NativeCollections">NativeCollections</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/NativeQueryHandler">NativeQueryHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/NativeQueryNotOptimized">Native<wbr>Query<wbr>Not<wbr>Optimized</a></td>
+									<td>Diagnostic, if Native Query can not be run optimized.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/NativeQueryOptimizerNotLoaded">Native<wbr>Query<wbr>Optimizer<wbr>Not<wbr>Loaded</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/NetArray">NetArray</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/NetClass">NetClass</a></td>
+									<td>Reflection implementation for Class to map to .NET reflection.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/NetConstructor">NetConstructor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/NetField">NetField</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/NetMethod">NetMethod</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/NetReflector">NetReflector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/NetTypeHandler">NetTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/NewFileHeaderBase">NewFileHeaderBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/No4">No4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/NoDuplicatesQueue">NoDuplicatesQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/NonblockingQueue">NonblockingQueue</a></td>
+									<td>Unbounded queue.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/NonDescendingActivationDepth">Non<wbr>Descending<wbr>Activation<wbr>Depth</a></td>
+									<td>Transparent Activation strategy.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/NonFlushingStorage">NonFlushingStorage</a></td>
+									<td>
+    Storage adapter that does not pass flush calls
+    on to its delegate.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.TA/NotTransparentActivationEnabled">Not<wbr>Transparent<wbr>Activation<wbr>Enabled</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/NQOptimizationInfo">NQOptimizationInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/NQOptimizerFactory">NQOptimizerFactory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Null">Null</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Caching/NullCache4">NullCache4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Callbacks/NullCallbacks">NullCallbacks</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/NullFieldAwareTypeHandler">Null<wbr>Field<wbr>Aware<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/NullFieldMetadata">NullFieldMetadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/NullFreespaceListener">Null<wbr>Freespace<wbr>Listener</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/NullFreespaceManager">NullFreespaceManager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/NullModifiedObjectQuery">Null<wbr>Modified<wbr>Object<wbr>Query</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/NullTransactionListener">Null<wbr>Transaction<wbr>Listener</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ObjectByRef">ObjectByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectContainerBase">ObjectContainerBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/SyncExecClosure4_1">ObjectContainerBase<wbr>.SyncExecClosure4</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Internal/SyncExecClosure4_1#typeparam-R">R</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/ObjectContainerEventArgs">Object<wbr>Container<wbr>Event<wbr>Args</a></td>
+									<td>Arguments for container related events.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectContainerFactory">Object<wbr>Container<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectContainerSession">Object<wbr>Container<wbr>Session</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/ObjectEventArgs">ObjectEventArgs</a></td>
+									<td>Arguments for object related events.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/ObjectFieldDoesNotExist">Object<wbr>Field<wbr>Does<wbr>Not<wbr>Exist</a></td>
+									<td>
+    Diagnostic if
+    <code class="cs">Db4objects.Db4o.Config.IObjectClass.ObjectField(System.String)</code>
+    was called on a
+    field that does not exist.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ObjectHeader">ObjectHeader</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ObjectHeaderAttributes">Object<wbr>Header<wbr>Attributes</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ObjectHeaderContext">ObjectHeaderContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectID">ObjectID</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ObjectIdContextImpl">ObjectIdContextImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectInfoCollectionImpl">Object<wbr>Info<wbr>Collection<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/ObjectInfoEventArgs">ObjectInfoEventArgs</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/ObjectNotStorableException">Object<wbr>Not<wbr>Storable<wbr>Exception</a></td>
+									<td>
+    this Exception is thrown, if objects can not be stored and if
+    db4o is configured to throw Exceptions on storage failures.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectReference">ObjectReference</a></td>
+									<td>A weak reference to an known object.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/ObjectReferenceContext">Object<wbr>Reference<wbr>Context</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/ObjectSetFacade">ObjectSetFacade</a></td>
+									<td>
+    List based objectSet implementation
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ObjectTypeMetadata">ObjectTypeMetadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/OldFormatException">OldFormatException</a></td>
+									<td>
+    db4o-specific exception.<br><br>
+    This exception is thrown when an old file format was detected
+    and
+    <code class="cs">Db4objects.Db4o.Config.IConfiguration.AllowVersionUpdates(System.Boolean)</code>
+    is set to false.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/OpenTypeHandler">OpenTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Versions/OpenTypeHandler0">OpenTypeHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Versions/OpenTypeHandler2">OpenTypeHandler2</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers.Versions/OpenTypeHandler7">OpenTypeHandler7</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/OrIndexedLeaf">OrIndexedLeaf</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/OutputStream">OutputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/PagingMemoryBin">PagingMemoryBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/PagingMemoryStorage">PagingMemoryStorage</a></td>
+									<td>
+    <code class="cs">Db4objects.Db4o.IO.IStorage</code>
+    implementation that produces
+    <code class="cs">Db4objects.Db4o.IO.IBin</code>
+    instances
+    that operate in memory.
+    Use this
+    <code class="cs">Db4objects.Db4o.IO.IStorage</code>
+    to work with db4o as an in-memory database.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Pair">Pair</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/PausableBlockingQueue">Pausable<wbr>Blocking<wbr>Queue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/PersistentBase">PersistentBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/PersistentIntegerArray">Persistent<wbr>Integer<wbr>Array</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/PlainObjectHandler">PlainObjectHandler</a></td>
+									<td>Tyehandler for naked plain objects (java.lang.Object).</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Platform4">Platform4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/PlatformReflectConstructor">Platform<wbr>Reflect<wbr>Constructor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/Pointer4">Pointer4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/PointerBasedIdSystem">PointerBasedIdSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/PointerTypeReference">PointerTypeReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/Predicate">Predicate</a></td>
+									<td>Base class for native queries.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/PredicateEvaluation">PredicateEvaluation</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/PredicatePlatform">PredicatePlatform</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/PreparedArrayContainsComparison">Prepared<wbr>Array<wbr>Contains<wbr>Comparison</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/PrimitiveCodec">PrimitiveCodec</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/PrimitiveHandler">PrimitiveHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/PrimitiveMarshaller">PrimitiveMarshaller</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/PrimitiveMarshaller0">PrimitiveMarshaller0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/PrimitiveMarshaller1">PrimitiveMarshaller1</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/PrimitiveTypeMetadata">Primitive<wbr>Type<wbr>Metadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/PrintWriter">PrintWriter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Logging/PrintWriterLoggerInterceptor">Print<wbr>Writer<wbr>Logger<wbr>Interceptor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/Prototypes">Prototypes</a></td>
+									<td>creates prototype objects for classes.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/PrototypesException">PrototypesException</a></td>
+									<td>exception for the the Prototypes world.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QCandidate">QCandidate</a></td>
+									<td>Represents an actual object in the database.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QCandidateBase">QCandidateBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QCandidates">QCandidates</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QCon">QCon</a></td>
+									<td>Base class for all constraints on queries.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConClass">QConClass</a></td>
+									<td>Class constraint on queries</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConEvaluation">QConEvaluation</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConJoin">QConJoin</a></td>
+									<td>Join constraint on queries</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConObject">QConObject</a></td>
+									<td>Object constraint on queries</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConPath">QConPath</a></td>
+									<td>
+    Placeholder for a constraint, only necessary to attach children
+    to the query graph.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConstraints">QConstraints</a></td>
+									<td>Array of constraints for queries.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QConUnconditional">QConUnconditional</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QE">QE</a></td>
+									<td>Query Evaluator - Represents such things as &gt;, &gt;=, &lt;, &lt;=, EQUAL, LIKE, etc.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEAbstract">QEAbstract</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEContains">QEContains</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEEndsWith">QEEndsWith</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEEqual">QEEqual</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEGreater">QEGreater</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEIdentity">QEIdentity</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEMulti">QEMulti</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QENot">QENot</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QESmaller">QESmaller</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEStartsWith">QEStartsWith</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QEStringCmp">QEStringCmp</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QField">QField</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinConstraint">QLinConstraint</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/QLinException">QLinException</a></td>
+									<td>
+    exceptions to signal improper use of the
+    <code class="cs">Db4objects.Db4o.Qlin.IQLin</code>
+    query interface.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinField">QLinField</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinNode">QLinNode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinOrderBy">QLinOrderBy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/QLinOrderByDirection">QLinOrderByDirection</a></td>
+									<td>
+    Internal implementation class, access should not be necessary,
+    except for implementors.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinRoot">QLinRoot</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinSodaNode">QLinSodaNode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Qlin/QLinSubNode">QLinSubNode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/QLinSupport">QLinSupport</a></td>
+									<td>
+    static import support class for
+    <code class="cs">Db4objects.Db4o.Qlin.IQLin</code>
+    queries.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QPending">QPending</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QPrimitiveCandidate">QPrimitiveCandidate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QQuery">QQuery</a></td>
+									<td>QQuery is the users hook on our graph.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QQueryBase">QQueryBase</a></td>
+									<td>QQuery is the users hook on our graph.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/CreateCandidateCollectionResult">QQueryBase<wbr>.<wbr>Create<wbr>Candidate<wbr>Collection<wbr>Result</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/QualifiedTypeReference">Qualified<wbr>Type<wbr>Reference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/QueryEvaluationMode">QueryEvaluationMode</a></td>
+									<td>
+    This class provides static constants for the query evaluation
+    modes that db4o supports.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/QueryEventArgs">QueryEventArgs</a></td>
+									<td>
+    Arguments for
+    <code class="cs">Db4objects.Db4o.Query.IQuery</code>
+    related events.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/QueryExecutionEventArgs">Query<wbr>Execution<wbr>Event<wbr>Args</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/QueryingReadContext">QueryingReadContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/QueryOptimizationFailureEventArgs">Query<wbr>Optimization<wbr>Failure<wbr>Event<wbr>Args</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/QueryResultCandidates">Query<wbr>Result<wbr>Candidates</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Util/Random">Random</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/RandomAccessFile">RandomAccessFile</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/RandomAccessFileFactory">Random<wbr>Access<wbr>File<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/RawClassSpec">RawClassSpec</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/RawFieldSpec">RawFieldSpec</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/ReadOnlyBin">ReadOnlyBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/ReferencedSlot">ReferencedSlot</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.References/ReferenceSystemRegistry">Reference<wbr>System<wbr>Registry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Reflect/ReflectClasses">ReflectClasses</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/ReflectConstructorSpec">Reflect<wbr>Constructor<wbr>Spec</a></td>
+									<td>
+    a spec holding a constructor, it's arguments
+    and information, if the constructor can instantiate
+    objects.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ReflectException">ReflectException</a></td>
+									<td>
+    db4o-specific exception.<br>
+    <br>
+    This exception is thrown when one of the db4o reflection methods fails.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Reflection4">Reflection4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ReflectorConfigurationImpl">Reflector<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/ReflectorUtils">ReflectorUtils</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ReflectPlatform">ReflectPlatform</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/ReindexNetDateTime_7_8">Reindex<wbr>Net<wbr>Date<wbr>Time_7_8</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/Rename">Rename</a></td>
+									<td>
+    Renaming actions are stored to the database file to make
+    sure that they are only performed once.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Renames">Renames</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Drs.Db4o/ReplicationRecord">ReplicationRecord</a></td>
+									<td>
+    tracks the version of the last replication between
+    two Objectcontainers.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Runnable4">Runnable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/RunnableAction">RunnableAction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen/Runtime">Runtime</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Runtime4">Runtime4</a></td>
+									<td>A collection of static methods that should be part of the runtime environment but are not.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/RuntimeInterruptedException">Runtime<wbr>Interrupted<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/SByteHandler">SByteHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/Searcher">Searcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/SearchTarget">SearchTarget</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/SequentialIdGenerator">Sequential<wbr>Id<wbr>Generator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Net/SerializationConstructor">Serialization<wbr>Constructor</a></td>
+									<td>Constructs objects by using System.Runtime.Serialization.FormatterServices.GetUninitializedObject
+    and bypasses calls to user contructors this way. Not available on CompactFramework
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/SerializedGraph">SerializedGraph</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Serializer">Serializer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Net/ServerSocket">ServerSocket</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/SharedIndexedFields">SharedIndexedFields</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/ShortHandler">ShortHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/ShortHandler0">ShortHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SignatureGenerator">SignatureGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/SimpleNameProvider">SimpleNameProvider</a></td>
+									<td>
+    Assigns a fixed, pre-defined name to the given
+    <code class="cs">Db4objects.Db4o.IObjectContainer</code>
+    .
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SimpleObjectPool">SimpleObjectPool</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SimpleTimer">SimpleTimer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/SimpleTypeReference">SimpleTypeReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/SingleClassTypeHandlerPredicate">Single<wbr>Class<wbr>Type<wbr>Handler<wbr>Predicate</a></td>
+									<td>allows installing a Typehandler for a single class.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/SingleNamedClassTypeHandlerPredicate">Single<wbr>Named<wbr>Class<wbr>Type<wbr>Handler<wbr>Predicate</a></td>
+									<td>allows installing a Typehandler for a single classname.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SingleValueIterator">SingleValueIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/Slot">Slot</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/SlotChange">SlotChange</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/SlotChangeFactory">SlotChangeFactory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/SlotFormat">SlotFormat</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/SlotFormat0">SlotFormat0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/SlotFormat2">SlotFormat2</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/SlotFormatCurrent">SlotFormatCurrent</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/SlotHandler">SlotHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/SnapShotQueryResult">SnapShotQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Net/Socket">Socket</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Net/SocketWrapper">SocketWrapper</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/SodaQueryComparator">SodaQueryComparator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/Direction">SodaQueryComparator<wbr>.Direction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/Ordering">SodaQueryComparator<wbr>.Ordering</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SortedCollection4">SortedCollection4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Stack4">Stack4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/StandardAspectTraversalStrategy">Standard<wbr>Aspect<wbr>Traversal<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/StandardIdSystemFactory">Standard<wbr>Id<wbr>System<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StandardReferenceTypeHandler">Standard<wbr>Reference<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/PreparedComparisonImpl">Standard<wbr>Reference<wbr>Type<wbr>Handler<wbr>.<wbr>Prepared<wbr>Comparison<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StandardReferenceTypeHandler0">Standard<wbr>Reference<wbr>Type<wbr>Handler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/StatefulBuffer">StatefulBuffer</a></td>
+									<td>
+    public for .NET conversion reasons
+    TODO: Split this class for individual usecases.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/StatefulQueryResult">StatefulQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/StaticClass">StaticClass</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/StaticField">StaticField</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/Status">Status</a></td>
+									<td>Static constants to describe the status of objects.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/StopWatch">StopWatch</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/StorageDecorator">StorageDecorator</a></td>
+									<td>Wrapper base class for all classes that wrap Storage.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/StoredClassImpl">StoredClassImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/StoredFieldImpl">StoredFieldImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/StreamAdaptor">StreamAdaptor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Reflect/StrictFieldAccessor">StrictFieldAccessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StringBasedValueTypeHandlerBase">String<wbr>Based<wbr>Value<wbr>Type<wbr>Handler<wbr>Base</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StringBufferHandler">StringBufferHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config.Encoding/StringEncodings">StringEncodings</a></td>
+									<td>All built in String encodings</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/StringEventArgs">StringEventArgs</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StringHandler">StringHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StringHandler0">StringHandler0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/StructHandler">StructHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SubTypePredicate">SubTypePredicate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/SynchronizedBin">SynchronizedBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SynchronizedHashtable4">Synchronized<wbr>Hashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SynchronizedIterator4">Synchronized<wbr>Iterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/SystemArrayTypeHandler">System<wbr>Array<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/SystemData">SystemData</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/SystemInfoFileImpl">SystemInfoFileImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Slots/SystemSlotChange">SystemSlotChange</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TagAttribute">TagAttribute</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TCultureInfo">TCultureInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TDictionary">TDictionary</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TernaryBool">TernaryBool</a></td>
+									<td>yes/no/dontknow data type</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/Thread">Thread</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/ThreadedSyncBin">ThreadedSyncBin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ThreadLocal4">ThreadLocal4</a></td>
+									<td>
+    ThreadLocal implementation for less capable platforms such as JRE 1.1 and
+    Silverlight.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Threading/ThreadPool4Impl">ThreadPool4Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TimeoutBlockingQueue">TimeoutBlockingQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/TimerFileLock">TimerFileLock</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fileheader/TimerFileLockDisabled">Timer<wbr>File<wbr>Lock<wbr>Disabled</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TimeStampIdGenerator">TimeStampIdGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TList">TList</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TNull">TNull</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/TPFixedUpdateDepth">TPFixedUpdateDepth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/TPUnspecifiedUpdateDepth">T<wbr>P<wbr>Unspecified<wbr>Update<wbr>Depth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/TPUpdateDepthProvider">T<wbr>P<wbr>Update<wbr>Depth<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TQueue">TQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/Transaction">Transaction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/TransactionalEventArgs">Transactional<wbr>Event<wbr>Args</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/TransactionalIdSystemImpl">Transactional<wbr>Id<wbr>System<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.References/TransactionalReferenceSystem">Transactional<wbr>Reference<wbr>System</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.References/TransactionalReferenceSystemBase">Transactional<wbr>Reference<wbr>System<wbr>Base</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TransactionContext">TransactionContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TransactionLocal">TransactionLocal</a></td>
+									<td>A transaction local variable.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Transactionlog/TransactionLogHandler">Transaction<wbr>Log<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/TransientAttribute">TransientAttribute</a></td>
+									<td>
+    Marks a field or event as transient.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TranslatedAspect">TranslatedAspect</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/TransparentActivationDepthProviderImpl">Transparent<wbr>Activation<wbr>Depth<wbr>Provider<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.TA/TransparentActivationSupport">Transparent<wbr>Activation<wbr>Support</a></td>
+									<td>
+    Configuration item that enables Transparent Activation Mode for this
+    session.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.TA/TransparentPersistenceSupport">Transparent<wbr>Persistence<wbr>Support</a></td>
+									<td>
+    Enables Transparent Persistence and Transparent Activation behaviours for
+    the current session.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/TransplantException">TransplantException</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/TransportIdSystem">TransportIdSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TransportObjectContainer">Transport<wbr>Object<wbr>Container</a></td>
+									<td>
+    no reading
+    no writing
+    no updates
+    no weak references
+    navigation by ID only both sides need synchronised ClassCollections and
+    MetaInformationCaches
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/KnownObjectIdentity">Transport<wbr>Object<wbr>Container<wbr>.KnownObjectIdentity</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/TraverseFieldCommand">TraverseFieldCommand</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Tree">Tree</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TreeInt">TreeInt</a></td>
+									<td>Base class for balanced trees.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TreeIntObject">TreeIntObject</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TreeKeyIterator">TreeKeyIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TreeNodeIterator">TreeNodeIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TreeObject">TreeObject</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TreeReader">TreeReader</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TSerializable">TSerializable</a></td>
+									<td>
+    translator for types that are marked with the Serializable attribute.
+    The Serializable translator is provided to allow persisting objects that
+    do not supply a convenient constructor. The use of this translator is
+    recommended only if:<br>
+    - the persistent type will never be refactored<br>
+    - querying for type members is not necessary<br>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TStack">TStack</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TTransient">TTransient</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TType">TType</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/TypeAlias">TypeAlias</a></td>
+									<td>
+    a simple Alias for a single Class or Type, using equals on
+    the names in the resolve method.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TypeHandlerAspect">TypeHandlerAspect</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TypeHandlerCloneContext">Type<wbr>Handler<wbr>Clone<wbr>Context</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/TypeHandlerConfiguration">Type<wbr>Handler<wbr>Configuration</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/TypeHandlerPredicatePair">Type<wbr>Handler<wbr>Predicate<wbr>Pair</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/TypeReference">TypeReference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/UIntHandler">UIntHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/ULongHandler">ULongHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Threading/UncaughtExceptionEventArgs">Uncaught<wbr>Exception<wbr>Event<wbr>Args</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/UnicodeStringEncoding">Unicode<wbr>String<wbr>Encoding</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/UnicodeStringIO">UnicodeStringIO</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Constraints/UniqueFieldValueConstraint">Unique<wbr>Field<wbr>Value<wbr>Constraint</a></td>
+									<td>Configures a field of a class to allow unique values only.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Constraints/UniqueFieldValueConstraintViolationException">Unique<wbr>Field<wbr>Value<wbr>Constraint<wbr>Violation<wbr>Exception</a></td>
+									<td>
+    This exception is thrown when a
+    <code class="cs">Db4objects.Db4o.Constraints.UniqueFieldValueConstraint</code>
+    is violated.<br><br>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/UnknownActivationDepth">Unknown<wbr>Activation<wbr>Depth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/UnknownTypeHandlerAspect">Unknown<wbr>Type<wbr>Handler<wbr>Aspect</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/UnmarshallingContext">UnmarshallingContext</a></td>
+									<td>Wraps the low-level details of reading a Buffer, which in turn is a glorified byte array.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/UnspecifiedUpdateDepth">Unspecified<wbr>Update<wbr>Depth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/UnsupportedOldFormatException">Unsupported<wbr>Old<wbr>Format<wbr>Exception</a></td>
+									<td>
+    This exception is thrown while reading old database
+    files for which support has been dropped.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/UnsupportedOrderingException">Unsupported<wbr>Ordering<wbr>Exception</a></td>
+									<td>
+    Ordering by non primitive fields works only for classes that implement the
+    <code class="cs">Db4objects.Db4o.TA.IActivatable</code>
+    interface
+    and
+    <code class="cs">Db4objects.Db4o.TA.TransparentActivationSupport</code>
+    is enabled.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/UpdateDepthGreaterOne">Update<wbr>Depth<wbr>Greater<wbr>One</a></td>
+									<td>Diagnostic, if update depth greater than 1.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/User">User</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/UShortHandler">UShortHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Encoding/UTF8StringEncoding">UTF8StringEncoding</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/UUIDFieldMetadata">UUIDFieldMetadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/VersionFieldMetadata">VersionFieldMetadata</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions/VersionNumberToCommitTimestamp_8_0">Version<wbr>Number<wbr>To<wbr>Commit<wbr>Timestamp_8_0</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/VirtualAttributes">VirtualAttributes</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/VirtualField">VirtualField</a></td>
+									<td>intended for future virtual fields on classes.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/VirtualFieldMetadata">VirtualFieldMetadata</a></td>
+									<td>
+    TODO: refactor for symmetric inheritance - don't inherit from YapField and override,
+    instead extract an abstract superclass from YapField and let both YapField and this class implement
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Weakref/WeakReferenceSupportFactory">Weak<wbr>Reference<wbr>Support<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/WildcardAlias">WildcardAlias</a></td>
+									<td>
+    Wildcard Alias functionality to create aliases for packages,
+    namespaces or multiple similar named classes.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="DelegateTypes">Delegate Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Delegate</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Action4">Action4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/EvaluationDelegate">EvaluationDelegate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Function_2">Function</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Foundation/Function_2#typeparam-A">A</a>, <wbr><a href="/api/Db4objects.Db4o.Foundation/Function_2#typeparam-B">B</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/SyncExecClosure_1">ObjectContainerBase<wbr>.SyncExecClosure</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Internal/SyncExecClosure_1#typeparam-R">R</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/QueryExecutionHandler">Query<wbr>Execution<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/QueryOptimizationFailureHandler">Query<wbr>Optimization<wbr>Failure<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="EnumTypes">Enum Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Enum</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Activation/ActivationPurpose">ActivationPurpose</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/QueryExecutionKind">QueryExecutionKind</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="InterfaceTypes">Interface Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Interface</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.TA/IActivatable">IActivatable</a></td>
+									<td>
+    The IActivatable interface must be implemented by classes in order to support transparent
+    activation/persistence
+    <br>
+    <br>
+    The IActivatable interface may be added to persistent classes by hand
+    or by using the db4o instrumentation (Db4oTools).  For further information instrumentation see the
+    chapter "Enhancement" in the db4o reference documentation.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/IActivatableCollection_1">I<wbr>Activatable<wbr>Collection</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Collections/IActivatableCollection_1#typeparam-T">T</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.TA/IActivatableInstrumented">I<wbr>Activatable<wbr>Instrumented</a></td>
+									<td>
+    Marker interface to declare a class already implements the required TA/TP hooks
+    and does not want to be instrumented further.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/IActivationContext">IActivationContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/IActivationDepth">IActivationDepth</a></td>
+									<td>Controls how deep an object graph is activated.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/IActivationDepthProvider">I<wbr>Activation<wbr>Depth<wbr>Provider</a></td>
+									<td>Factory for ActivationDepth strategies.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Activation/IActivator">IActivator</a></td>
+									<td>
+    Activator interface.<br>
+    <br><br>
+    <code class="cs">Db4objects.Db4o.TA.IActivatable</code>
+    objects need to have a reference to
+    an Activator implementation, which is called
+    by Transparent Activation, when a request is received to
+    activate the host object.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IAlias">IAlias</a></td>
+									<td>
+    Implement this interface when implementing special custom Aliases
+    for classes, packages or namespaces.
+    
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IArrayFactory">IArrayFactory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/IAspectTraversalStrategy">I<wbr>Aspect<wbr>Traversal<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IAspectVersionContext">I<wbr>Aspect<wbr>Version<wbr>Context</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Collections/IBigSetPersistence">IBigSetPersistence</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/IBin">IBin</a></td>
+									<td>
+    Representation of a container for storage of db4o
+    database data (to file, to memory).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Types/IBlob">IBlob</a></td>
+									<td>
+    the db4o Blob type to store blobs independent of the main database
+    file and allows to perform asynchronous upload and download operations.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IBlobStatus">IBlobStatus</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IBlobTransport">IBlobTransport</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IBlock4">IBlock4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IBlockConverter">IBlockConverter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IBlockingQueue4">IBlockingQueue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/IBlockSize">IBlockSize</a></td>
+									<td>Block size registry.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/IBTreeRange">IBTreeRange</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/IBTreeRangeVisitor">IBTreeRangeVisitor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/IBTreeStructureListener">I<wbr>B<wbr>Tree<wbr>Structure<wbr>Listener</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IBufferContext">IBufferContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IBuiltinTypeHandler">IBuiltinTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Caching/ICache4">ICache4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ICacheConfiguration">ICacheConfiguration</a></td>
+									<td>Interface to configure the cache configurations.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ICacheConfigurationProvider">I<wbr>Cache<wbr>Configuration<wbr>Provider</a></td>
+									<td>
+    A configuration provider that provides access
+    to the cache-related configuration methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ICallbackInfoCollector">I<wbr>Callback<wbr>Info<wbr>Collector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Callbacks/ICallbacks">ICallbacks</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/ICancellableEventArgs">I<wbr>Cancellable<wbr>Event<wbr>Args</a></td>
+									<td>Argument for events related to cancellable actions.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ICancellableVisitor4">ICancellableVisitor4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/ICandidate">ICandidate</a></td>
+									<td>
+    Candidate for
+    <code class="cs">Db4objects.Db4o.Query.IEvaluation</code>
+    callbacks.
+    <br><br>
+    During
+    <code class="cs">Db4objects.Db4o.Query.IQuery.Execute</code>
+    all registered
+    <code class="cs">Db4objects.Db4o.Query.IEvaluation</code>
+    callback
+    handlers are called with
+    <code class="cs">Db4objects.Db4o.Query.ICandidate</code>
+    proxies that represent the persistent objects that
+    meet all other
+    <code class="cs">Db4objects.Db4o.Query.IQuery</code>
+    criteria.
+    <br><br>
+    A
+    <code class="cs">Db4objects.Db4o.Query.ICandidate</code>
+    provides access to the query candidate object. It
+    represents and allows to specify whether it is to be included in the query result
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ICanExcludeNullInQueries">I<wbr>Can<wbr>Exclude<wbr>Null<wbr>In<wbr>Queries</a></td>
+									<td>
+    marker interface for Indexable4, if a check for null is necessary
+    in BTreeRangeSingle#firstBTreePointer()
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/ICascadingTypeHandler">I<wbr>Cascading<wbr>Type<wbr>Handler</a></td>
+									<td>TypeHandler for objects with members.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Classindex/IClassIndexStrategy">IClassIndexStrategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IClientServerConfiguration">I<wbr>Client<wbr>Server<wbr>Configuration</a></td>
+									<td>Client/Server configuration interface.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IClosure4">IClosure4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation.Collections/ICollectionInitializer">I<wbr>Collection<wbr>Initializer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ICommittedCallbackDispatcher">I<wbr>Committed<wbr>Callback<wbr>Dispatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ICommonConfiguration">ICommonConfiguration</a></td>
+									<td>
+    Common configuration methods, applicable for
+    embedded, client and server use of db4o.<br><br>
+    In Client/Server use it is good practice to configure the
+    client and the server in exactly the same way.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ICommonConfigurationProvider">I<wbr>Common<wbr>Configuration<wbr>Provider</a></td>
+									<td>
+    A configuration provider that provides access to
+    the common configuration methods that can be called
+    for embedded, server and client use of db4o.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IComparable4">IComparable4</a></td>
+									<td>Interface for comparison support in queries.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ICompare">ICompare</a></td>
+									<td>allows special comparison behaviour during query evaluation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IComparison4">IComparison4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IConfiguration">IConfiguration</a></td>
+									<td>configuration interface.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IConfigurationItem">IConfigurationItem</a></td>
+									<td>
+    Implement this interface for configuration items that encapsulate
+    a batch of configuration settings or that need to be applied
+    to ObjectContainers after they are opened.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/IConstraint">IConstraint</a></td>
+									<td>
+    Constraint to limit the objects returned upon <code class="cs">Db4objects.Db4o.Query.IQuery.Execute</code>.
+    <br><br>
+    Constraints are constructed by calling <code class="cs">Db4objects.Db4o.Query.IQuery.Constrain(System.Object)</code>
+    <br><br>
+    Constraints can be joined with the methods <code class="cs">Db4objects.Db4o.Query.IConstraint.And(Db4objects.Db4o.Query.IConstraint)</code>
+    and <code class="cs">Db4objects.Db4o.Query.IConstraint.Or(Db4objects.Db4o.Query.IConstraint)</code>.
+    <br><br>
+    The methods to modify the constraint evaluation algorithm may
+    be merged, to construct combined evaluation rules.
+    Examples:
+    <ul>
+    <li>For "smaller or equal": <pre>Constraint.Smaller().Equal()</pre>  </li>
+    <li>For "not like": <pre>Constraint.Not().Like()</pre> </li>
+    <li>For "not greater or equal": <pre>Constraint.Not().Greater().Equal()</pre> </li>
+    </ul>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/IConstraints">IConstraints</a></td>
+									<td>
+    A set of
+    <code class="cs">Db4objects.Db4o.Query.IConstraint</code>
+    objects.
+    <br><br>This extension of the
+    <code class="cs">Db4objects.Db4o.Query.IConstraint</code>
+    interface allows
+    setting the evaluation mode of all contained
+    <code class="cs">Db4objects.Db4o.Query.IConstraint</code>
+    objects with single calls.
+    <br><br>
+    See also
+    <code class="cs">Db4objects.Db4o.Query.IQuery.Constraints</code>
+    .
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/IConstructorAwareReflectClass">I<wbr>Constructor<wbr>Aware<wbr>Reflect<wbr>Class</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IContext">IContext</a></td>
+									<td>
+    common functionality for
+    <code class="cs">Db4objects.Db4o.Marshall.IReadContext</code>
+    and
+    <code class="cs">Db4objects.Db4o.Marshall.IWriteContext</code>
+    and
+    <code class="cs">Db4objects.Db4o.Internal.Delete.IDeleteContext</code>
+    
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IDb4oCallback">IDb4oCallback</a></td>
+									<td>generic callback interface.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/IDb4oEnhancedFilter">IDb4oEnhancedFilter</a></td>
+									<td>FIXME: Rename to Db4oEnhancedPredicate</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/IDb4oNQOptimizer">IDb4oNQOptimizer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/IDb4oQueryExecutionListener">I<wbr>Db4o<wbr>Query<wbr>Execution<wbr>Listener</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Replication/IDb4oReplicationReference">I<wbr>Db4o<wbr>Replication<wbr>Reference</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Replication/IDb4oReplicationReferenceProvider">I<wbr>Db4o<wbr>Replication<wbr>Reference<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Types/IDb4oType">IDb4oType</a></td>
+									<td>marker interface for all special db4o types.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IDb4oTypeImpl">IDb4oTypeImpl</a></td>
+									<td>marker interface for special db4o datatypes</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IDeepClone">IDeepClone</a></td>
+									<td>Deep clone</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IDefragmentContext">IDefragmentContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/IDefragmentListener">IDefragmentListener</a></td>
+									<td>Listener for defragmentation process messages.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/IDefragmentServices">IDefragmentServices</a></td>
+									<td>Encapsulates services involving source and target database files during defragmenting.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Delete/IDeleteContext">IDeleteContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/IDiagnostic">IDiagnostic</a></td>
+									<td>
+    Marker interface for Diagnostic messages<br><br>
+    Diagnostic system can be enabled on a running db4o database
+    to notify a user about possible problems or misconfigurations.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/IDiagnosticConfiguration">I<wbr>Diagnostic<wbr>Configuration</a></td>
+									<td>provides methods to configure the behaviour of db4o
+    diagnostics.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Diagnostic/IDiagnosticListener">IDiagnosticListener</a></td>
+									<td>listens to Diagnostic messages.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IEmbeddedConfiguration">I<wbr>Embedded<wbr>Configuration</a></td>
+									<td>Configuration interface for db4o in embedded use.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IEmbeddedConfigurationItem">I<wbr>Embedded<wbr>Configuration<wbr>Item</a></td>
+									<td>
+    Implement this interface for configuration items that encapsulate
+    a batch of configuration settings or that need to be applied
+    to EmbeddedObjectContainers after they are opened.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IEmbeddedObjectContainer">I<wbr>Embedded<wbr>Object<wbr>Container</a></td>
+									<td>Represents a local ObjectContainer attached to a database file.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IEntry4">IEntry4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IEnvironment">IEnvironment</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IEnvironmentConfiguration">I<wbr>Environment<wbr>Configuration</a></td>
+									<td>Configures the environment (set of services) used by db4o.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/IEvaluation">IEvaluation</a></td>
+									<td>For implementation of callback evaluations.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IEventDispatcher">IEventDispatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Events/IEventRegistry">IEventRegistry</a></td>
+									<td>
+    Provides a way to register event handlers for specific <code class="cs">Db4objects.Db4o.IObjectContainer</code> events.<br>
+    EventRegistry methods represent events available for registering callbacks.
+    EventRegistry instance can be obtained from <code class="cs">Db4objects.Db4o.Events.EventRegistryFactory</code>.
+    <pre><code class="cs">EventRegistry registry =  EventRegistryFactory.ForObjectContainer(container);</code></pre>
+    A new callback can be registered for an event with the following code:
+    <pre><code class="cs">private static void OnCreated(object sender, ObjectInfoEventArgs args)
+{
+&nbsp;&nbsp; Object obj = args.Object;
+&nbsp;&nbsp; if (obj is Pilot)
+&nbsp;&nbsp; {
+&nbsp;&nbsp; &nbsp;&nbsp; Console.WriteLine(obj.ToString());
+&nbsp;&nbsp; }
+}
+registry.Created+=OnCreated;</code></pre>
+    
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IExtClient">IExtClient</a></td>
+									<td>
+    extended client functionality for the
+    <code class="cs">Db4objects.Db4o.Ext.IExtObjectContainer</code>
+    interface.
+    <br><br>Both
+    <code class="cs">com.db4o.Db4oClientServer#openClient</code>
+    methods always
+    return an ExtClient object so a cast is possible.<br><br>
+    The ObjectContainer functionality is split into multiple interfaces to allow newcomers to
+    focus on the essential methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IExtObjectContainer">IExtObjectContainer</a></td>
+									<td>
+    extended functionality for the
+    <code class="cs">Db4objects.Db4o.IObjectContainer</code>
+    interface.
+    <br><br>Every db4o
+    <code class="cs">Db4objects.Db4o.IObjectContainer</code>
+    always is an ExtObjectContainer so a cast is possible.<br><br>
+    <code class="cs">Db4objects.Db4o.IObjectContainer.Ext</code>
+    is a convenient method to perform the cast.<br><br>
+    The ObjectContainer functionality is split to two interfaces to allow newcomers to
+    focus on the essential methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IExtObjectServer">IExtObjectServer</a></td>
+									<td>extended functionality for the ObjectServer interface.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IExtObjectSet">IExtObjectSet</a></td>
+									<td>
+    extended functionality for the
+    <code class="cs">Db4objects.Db4o.IObjectSet</code>
+    interface.
+    <br><br>Every db4o
+    <code class="cs">Db4objects.Db4o.IObjectSet</code>
+    always is an ExtObjectSet so a cast is possible.<br><br>
+    <code class="cs">Db4objects.Db4o.IObjectSet.Ext</code>
+    is a convenient method to perform the cast.<br><br>
+    The ObjectSet functionality is split to two interfaces to allow newcomers to
+    focus on the essential methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Reflect/IFieldAccessor">IFieldAccessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/IFieldAwareTypeHandler">I<wbr>Field<wbr>Aware<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/IFieldFilterable">IFieldFilterable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Btree/IFieldIndexKey">IFieldIndexKey</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IFieldMarshaller">IFieldMarshaller</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IFileConfiguration">IFileConfiguration</a></td>
+									<td>
+    File-related configuration methods, applicable
+    for db4o embedded use and on the server in a
+    Client/Server setup.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IFileConfigurationProvider">I<wbr>File<wbr>Configuration<wbr>Provider</a></td>
+									<td>
+    A configuration provider that provides access
+    to the file-related configuration methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/IFilenameFilter">IFilenameFilter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/IFixedDepth">IFixedDepth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IFixedSizeIntIterator4">I<wbr>Fixed<wbr>Size<wbr>Int<wbr>Iterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IFreespaceConfiguration">I<wbr>Freespace<wbr>Configuration</a></td>
+									<td>interface to configure the freespace system to be used.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IFreespaceFiller">IFreespaceFiller</a></td>
+									<td>Callback hook for overwriting freed space in the database file.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/IFreespaceListener">IFreespaceListener</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Freespace/IFreespaceManager">IFreespaceManager</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IFunction4">IFunction4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/IGenericConverter">IGenericConverter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/IGrowthStrategy">IGrowthStrategy</a></td>
+									<td>Strategy for file/byte array growth.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IHandlerVersionContext">I<wbr>Handler<wbr>Version<wbr>Context</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/IIdMapping">IIdMapping</a></td>
+									<td>The ID mapping used internally during a defragmentation run.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Mapping/IIDMapping">IIDMapping</a></td>
+									<td>A mapping from db4o file source IDs/addresses to target IDs/addresses, used for defragmenting.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/IIdSystem">IIdSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IIdSystemConfiguration">I<wbr>Id<wbr>System<wbr>Configuration</a></td>
+									<td>Interface to configure the IdSystem.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IIdSystemConfigurationProvider">I<wbr>Id<wbr>System<wbr>Configuration<wbr>Provider</a></td>
+									<td>
+    A configuration provider that provides access
+    to the IdSystem-related configuration methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IIdSystemFactory">IIdSystemFactory</a></td>
+									<td>Factory interface to create a custom IdSystem.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IIndexable4">IIndexable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IIndexableTypeHandler">I<wbr>Indexable<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/IIndexedNode">IIndexedNode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Fieldindex/IIndexedNodeWithRange">I<wbr>Indexed<wbr>Node<wbr>With<wbr>Range</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/IInputStream">IInputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/IInstantiatingTypeHandler">I<wbr>Instantiating<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntComparator">IIntComparator</a></td>
+									<td>
+    Non boxing/unboxing version of
+    <code class="cs">System.Collections.IComparer&lt;T&gt;</code>
+    for
+    faster id comparisons.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IInternal4">IInternal4</a></td>
+									<td>Marker interface to denote that a class is used for db4o internals.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/IInternalCandidate">IInternalCandidate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IInternalObjectContainer">I<wbr>Internal<wbr>Object<wbr>Container</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/IInternalQuery">IInternalQuery</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IInternalReadContext">IInternalReadContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntIterator4">IIntIterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntObjectVisitor">IIntObjectVisitor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntVisitable">IIntVisitable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntVisitor">IIntVisitor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/ILegacyClientServerFactory">I<wbr>Legacy<wbr>Client<wbr>Server<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Config/ILegacyConfigurationProvider">I<wbr>Legacy<wbr>Configuration<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ILinkLengthAware">ILinkLengthAware</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IListener4">IListener4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Logging/ILogging">ILogging</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Logging/ILoggingInterceptor">ILoggingInterceptor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IMap4">IMap4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IMarshallingInfo">IMarshallingInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Messaging/IMessageContext">IMessageContext</a></td>
+									<td>Additional message-related information.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Messaging/IMessageRecipient">IMessageRecipient</a></td>
+									<td>message recipient for client/server messaging.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Messaging/IMessageSender">IMessageSender</a></td>
+									<td>message sender for client/server messaging.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IModificationAware">IModificationAware</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/IModifiedObjectQuery">IModifiedObjectQuery</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/INameProvider">INameProvider</a></td>
+									<td>A provider for custom database names.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query/INQOptimizer">INQOptimizer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IObjectAttribute">IObjectAttribute</a></td>
+									<td>generic interface to allow returning an attribute of an object.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IObjectCallbacks">IObjectCallbacks</a></td>
+									<td>callback methods.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IObjectClass">IObjectClass</a></td>
+									<td>configuration interface for classes.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IObjectConstructor">IObjectConstructor</a></td>
+									<td>
+    interface to allow instantiating objects by calling specific constructors.
+    
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IObjectContainer">IObjectContainer</a></td>
+									<td>The interface to a db4o database, stand-alone or client/server.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IObjectContainerSpec">IObjectContainerSpec</a></td>
+									<td>Workaround to provide the Java 5 version with a hook to add ExtObjectContainer.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IObjectField">IObjectField</a></td>
+									<td>configuration interface for fields of classes.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Marshall/IObjectIdContext">IObjectIdContext</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IObjectInfo">IObjectInfo</a></td>
+									<td>
+    interface to the internal reference that an ObjectContainer
+    holds for a stored object.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IObjectInfoCollection">I<wbr>Object<wbr>Info<wbr>Collection</a></td>
+									<td>
+    Interface to an iterable collection
+    <code class="cs">Db4objects.Db4o.Ext.IObjectInfo</code>
+    objects.<br><br>
+    ObjectInfoCollection is used reference a number of stored objects.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IObjectPool">IObjectPool</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IObjectServer">IObjectServer</a></td>
+									<td>The db4o server interface.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/IObjectSet">IObjectSet</a></td>
+									<td>An ObjectSet is a representation for a set of objects returned  by a query.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IObjectTranslator">IObjectTranslator</a></td>
+									<td>translator interface to translate objects on storage and activation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.IO/IOutputStream">IOutputStream</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Processor/IParentCandidate">IParentCandidate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IPausableBlockingQueue4">I<wbr>Pausable<wbr>Blocking<wbr>Queue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IPersistent">IPersistent</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IPredicate4">IPredicate4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IPreparedComparison">IPreparedComparison</a></td>
+									<td>
+    a prepared comparison, to compare multiple objects
+    with one single object.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IProcedure4">IProcedure4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Caching/IPurgeableCache4">IPurgeableCache4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/IQLin">IQLin</a></td>
+									<td>a node in a QLin ("Coolin") query.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Qlin/IQLinable">IQLinable</a></td>
+									<td>support for the new experimental QLin ("Coolin") query interface.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/IQuery">IQuery</a></td>
+									<td>Handle to a node in a S.O.D.A.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/IQueryableTypeHandler">I<wbr>Queryable<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/IQueryComparator">IQueryComparator</a></td>
+									<td>
+    This interface is not used in .NET.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config/IQueryConfiguration">IQueryConfiguration</a></td>
+									<td>interface to configure the querying settings to be used by the query processor.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Query.Result/IQueryResult">IQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IQueryResultIteratorFactory">I<wbr>Query<wbr>Result<wbr>Iterator<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IQueue4">IQueue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IReadable">IReadable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IReadBuffer">IReadBuffer</a></td>
+									<td>
+    a buffer interface with methods to read and to position
+    the read pointer in the buffer.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IReadContext">IReadContext</a></td>
+									<td>
+    this interface is passed to internal class
+    <code class="cs">Db4objects.Db4o.Typehandlers.ITypeHandler4</code>
+    when instantiating objects.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IReadsObjectIds">IReadsObjectIds</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IReadWriteable">IReadWriteable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IReadWriteBuffer">IReadWriteBuffer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IReferenceActivationContext">I<wbr>Reference<wbr>Activation<wbr>Context</a></td>
+									<td>this interface is passed to reference type handlers.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.References/IReferenceSystem">IReferenceSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.References/IReferenceSystemFactory">I<wbr>Reference<wbr>System<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/IReferenceTypeHandler">I<wbr>Reference<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflectArray">IReflectArray</a></td>
+									<td>Reflection Array representation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflectClass">IReflectClass</a></td>
+									<td>Reflection Class representation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Generic/IReflectClassBuilder">IReflectClassBuilder</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflectClassPredicate">I<wbr>Reflect<wbr>Class<wbr>Predicate</a></td>
+									<td>Predicate representation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect.Core/IReflectConstructor">IReflectConstructor</a></td>
+									<td>Reflection Constructor representation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflectField">IReflectField</a></td>
+									<td>Reflection Field representation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflectMethod">IReflectMethod</a></td>
+									<td>Reflection Method representation.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflector">IReflector</a></td>
+									<td>root of the reflection implementation API.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Reflect/IReflectorConfiguration">I<wbr>Reflector<wbr>Configuration</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IReservedBuffer">IReservedBuffer</a></td>
+									<td>a reserved buffer within a write buffer.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.TA/IRollbackStrategy">IRollbackStrategy</a></td>
+									<td>Interface defining rollback behavior when Transparent Persistence mode is on.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Lang/IRunnable">IRunnable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ISequence4">ISequence4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Sharpen.Util/ISet">ISet</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Collections/ISet_1">ISet</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Collections/ISet_1#typeparam-T">T</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ISet4">ISet4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IShallowClone">IShallowClone</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ISlotCopyHandler">ISlotCopyHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Query/ISodaQueryFactory">ISodaQueryFactory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ISortable4">ISortable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/IStackableIdSystem">IStackableIdSystem</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.IO/IStorage">IStorage</a></td>
+									<td>
+    Base interface for Storage adapters that open a
+    <code class="cs">Db4objects.Db4o.IO.IBin</code>
+    to store db4o database data to.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IStoredClass">IStoredClass</a></td>
+									<td>the internal representation of a stored class.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Defragment/IStoredClassFilter">IStoredClassFilter</a></td>
+									<td>Filter for StoredClass instances.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/IStoredField">IStoredField</a></td>
+									<td>the internal representation of a field on a stored class.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Config.Encoding/IStringEncoding">IStringEncoding</a></td>
+									<td>
+    encodes a String to a byte array and decodes a String
+    from a part of a byte array
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Ext/ISystemInfo">ISystemInfo</a></td>
+									<td>provides information about system state and system settings.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Threading/IThreadPool4">IThreadPool4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ITimeoutBlockingQueue4">I<wbr>Timeout<wbr>Blocking<wbr>Queue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Ids/ITransactionalIdSystem">I<wbr>Transactional<wbr>Id<wbr>System</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/ITransactionAware">ITransactionAware</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o/ITransactionListener">ITransactionListener</a></td>
+									<td>
+    allows registration with a transaction to be notified of
+    commit and rollback
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/ITransactionParticipant">I<wbr>Transaction<wbr>Participant</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Types/ITransientClass">ITransientClass</a></td>
+									<td>Marker interface to denote that a class should not be stored by db4o.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/ITransparentActivationDepthProvider">I<wbr>Transparent<wbr>Activation<wbr>Depth<wbr>Provider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Metadata/ITraverseAspectCommand">I<wbr>Traverse<wbr>Aspect<wbr>Command</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/ITypeFamilyTypeHandler">I<wbr>Type<wbr>Family<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/ITypeHandler4">ITypeHandler4</a></td>
+									<td>
+    handles reading, writing, deleting, defragmenting and
+    comparisons for types of objects.<br><br>
+    Custom Typehandlers can be implemented to alter the default
+    behaviour of storing all non-transient fields of an object.<br><br>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/ITypeHandlerPredicate">I<wbr>Type<wbr>Handler<wbr>Predicate</a></td>
+									<td>
+    Predicate to be able to select if a specific TypeHandler is
+    applicable for a specific Type.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Types/IUnversioned">IUnversioned</a></td>
+									<td>
+    marker interface to denote that version numbers and UUIDs should
+    not be generated for a class that implements this interface
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/IUpdateDepth">IUpdateDepth</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Activation/IUpdateDepthProvider">IUpdateDepthProvider</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Typehandlers/IValueTypeHandler">IValueTypeHandler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/IVariableLengthTypeHandler">I<wbr>Variable<wbr>Length<wbr>Type<wbr>Handler</a></td>
+									<td>
+    marker interface for TypeHandlers where the slot
+    length can change, depending on the object stored
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IVersionedTypeHandler">I<wbr>Versioned<wbr>Type<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Handlers/IVirtualAttributeHandler">I<wbr>Virtual<wbr>Attribute<wbr>Handler</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IVisitable">IVisitable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IVisitor4">IVisitor4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Internal.Weakref/IWeakReferenceSupport">I<wbr>Weak<wbr>Reference<wbr>Support</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IWriteBuffer">IWriteBuffer</a></td>
+									<td>a buffer interface with write methods.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Marshall/IWriteContext">IWriteContext</a></td>
+									<td>
+    this interface is passed to internal class
+    <code class="cs">Db4objects.Db4o.Typehandlers.ITypeHandler4</code>
+    during marshaling
+    and provides methods to marshal objects.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IDeferred">KeySpec<wbr>.IDeferred</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="StructTypes">Struct Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Struct</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Tuple_2">Tuple</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Foundation/Tuple_2#typeparam-A">A</a>, <wbr><a href="/api/Db4objects.Db4o.Foundation/Tuple_2#typeparam-B">B</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

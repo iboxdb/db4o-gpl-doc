@@ -1,0 +1,1014 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>DB4O GPL API Documentation - API - Db4objects.Db4o.Foundation Namespace</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>DB4O GPL API Documentation</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+<p><a href="#InterfaceTypes">Interface Types</a></p>
+<p><a href="#DelegateTypes">Delegate Types</a></p>
+<p><a href="#StructTypes">Struct Types</a></p>
+<p><a href="#Namespaces">Namespaces</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+	<li class="header">Namespaces</li>   
+
+				<li class="treeview active">
+				<a href="/api/Db4objects">Db4objects</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview active">
+				<a href="/api/Db4objects.Db4o">Db4objects<wbr>.Db4o</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Activation">Db4objects<wbr>.Db4o<wbr>.Activation</a></li>
+			<li><a href="/api/Db4objects.Db4o.Collections">Db4objects<wbr>.Db4o<wbr>.Collections</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Config">Db4objects<wbr>.Db4o<wbr>.Config</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Config.Attributes">Db4objects<wbr>.Db4o<wbr>.Config<wbr>.Attributes</a></li>
+			<li><a href="/api/Db4objects.Db4o.Config.Encoding">Db4objects<wbr>.Db4o<wbr>.Config<wbr>.Encoding</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Constraints">Db4objects<wbr>.Db4o<wbr>.Constraints</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.CS">Db4objects<wbr>.Db4o<wbr>.CS</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.CS.Caching">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Caching</a></li>
+			<li><a href="/api/Db4objects.Db4o.CS.Config">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Config</a></li>
+			<li><a href="/api/Db4objects.Db4o.CS.Foundation">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Foundation</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.CS.Internal">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.CS.Internal.Caching">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Caching</a></li>
+			<li><a href="/api/Db4objects.Db4o.CS.Internal.Config">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Config</a></li>
+			<li><a href="/api/Db4objects.Db4o.CS.Internal.Events">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Events</a></li>
+			<li><a href="/api/Db4objects.Db4o.CS.Internal.Messages">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Messages</a></li>
+			<li><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange">Db4objects<wbr>.Db4o<wbr>.CS<wbr>.Internal<wbr>.Objectexchange</a></li>
+</ul></li></ul></li>			<li><a href="/api/Db4objects.Db4o.Defragment">Db4objects<wbr>.Db4o<wbr>.Defragment</a></li>
+			<li><a href="/api/Db4objects.Db4o.Diagnostic">Db4objects<wbr>.Db4o<wbr>.Diagnostic</a></li>
+			<li><a href="/api/Db4objects.Db4o.Events">Db4objects<wbr>.Db4o<wbr>.Events</a></li>
+			<li><a href="/api/Db4objects.Db4o.Ext">Db4objects<wbr>.Db4o<wbr>.Ext</a></li>
+
+				<li class="treeview active selected">
+				<a href="/api/Db4objects.Db4o.Foundation">Db4objects<wbr>.Db4o<wbr>.Foundation</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Foundation.Collections">Db4objects<wbr>.Db4o<wbr>.Foundation<wbr>.Collections</a></li>
+			<li><a href="/api/Db4objects.Db4o.Foundation.IO">Db4objects<wbr>.Db4o<wbr>.Foundation<wbr>.IO</a></li>
+</ul></li>
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Internal">Db4objects<wbr>.Db4o<wbr>.Internal</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Internal.Activation">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Activation</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Internal.Btree">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Btree</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Internal.Btree.Algebra">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Btree<wbr>.Algebra</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Internal.Caching">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Caching</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Callbacks">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Callbacks</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Classindex">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Classindex</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Collections">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Collections</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Config">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Config</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Internal.Convert">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Convert</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Internal.Convert.Conversions">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Convert<wbr>.Conversions</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Internal.Delete">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Delete</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Diagnostic">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Diagnostic</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Encoding">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Encoding</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Events">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Events</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Fieldindex">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Fieldindex</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Fileheader">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Fileheader</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Freespace">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Freespace</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Internal.Handlers">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Handlers</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Internal.Handlers.Array">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Handlers<wbr>.Array</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Handlers.Versions">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Handlers<wbr>.Versions</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Internal.Ids">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Ids</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.IO">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.IO</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Linq">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Linq</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Logging">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Logging</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Mapping">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Mapping</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Marshall">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Marshall</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Metadata">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Metadata</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Qlin">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Qlin</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Internal.Query">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Query</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Internal.Query.Processor">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Query<wbr>.Processor</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Query.Result">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Query<wbr>.Result</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Internal.References">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.References</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Internal.Reflect">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Reflect</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Internal.Reflect.Generic">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Reflect<wbr>.Generic</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Internal.Replication">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Replication</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Slots">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Slots</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Threading">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Threading</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Transactionlog">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Transactionlog</a></li>
+			<li><a href="/api/Db4objects.Db4o.Internal.Weakref">Db4objects<wbr>.Db4o<wbr>.Internal<wbr>.Weakref</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.IO">Db4objects<wbr>.Db4o<wbr>.IO</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Linq">Db4objects<wbr>.Db4o<wbr>.Linq</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Linq.Caching">Db4objects<wbr>.Db4o<wbr>.Linq<wbr>.Caching</a></li>
+			<li><a href="/api/Db4objects.Db4o.Linq.Expressions">Db4objects<wbr>.Db4o<wbr>.Linq<wbr>.Expressions</a></li>
+			<li><a href="/api/Db4objects.Db4o.Linq.Internals">Db4objects<wbr>.Db4o<wbr>.Linq<wbr>.Internals</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Marshall">Db4objects<wbr>.Db4o<wbr>.Marshall</a></li>
+			<li><a href="/api/Db4objects.Db4o.Messaging">Db4objects<wbr>.Db4o<wbr>.Messaging</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.native">Db4objects<wbr>.Db4o<wbr>.native</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.native.Db4objects">Db4objects<wbr>.Db4o<wbr>.native<wbr>.Db4objects</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.native.Db4objects.Db4o">Db4objects<wbr>.Db4o<wbr>.native<wbr>.Db4objects<wbr>.Db4o</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.native.Db4objects.Db4o.Internal">Db4objects<wbr>.Db4o<wbr>.native<wbr>.Db4objects<wbr>.Db4o<wbr>.Internal</a></li>
+</ul></li></ul></li></ul></li>			<li><a href="/api/Db4objects.Db4o.Qlin">Db4objects<wbr>.Db4o<wbr>.Qlin</a></li>
+			<li><a href="/api/Db4objects.Db4o.Query">Db4objects<wbr>.Db4o<wbr>.Query</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Reflect">Db4objects<wbr>.Db4o<wbr>.Reflect</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Reflect.Core">Db4objects<wbr>.Db4o<wbr>.Reflect<wbr>.Core</a></li>
+			<li><a href="/api/Db4objects.Db4o.Reflect.Generic">Db4objects<wbr>.Db4o<wbr>.Reflect<wbr>.Generic</a></li>
+			<li><a href="/api/Db4objects.Db4o.Reflect.Net">Db4objects<wbr>.Db4o<wbr>.Reflect<wbr>.Net</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.TA">Db4objects<wbr>.Db4o<wbr>.TA</a></li>
+			<li><a href="/api/Db4objects.Db4o.Tutorial">Db4objects<wbr>.Db4o<wbr>.Tutorial</a></li>
+
+				<li class="treeview">
+				<a href="/api/Db4objects.Db4o.Typehandlers">Db4objects<wbr>.Db4o<wbr>.Typehandlers</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Db4o.Typehandlers.Internal">Db4objects<wbr>.Db4o<wbr>.Typehandlers<wbr>.Internal</a></li>
+</ul></li>			<li><a href="/api/Db4objects.Db4o.Types">Db4objects<wbr>.Db4o<wbr>.Types</a></li>
+</ul></li>
+				<li class="treeview">
+				<a href="/api/Db4objects.Drs">Db4objects<wbr>.Drs</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4objects.Drs.Db4o">Db4objects<wbr>.Drs<wbr>.Db4o</a></li>
+</ul></li></ul></li>
+				<li class="treeview">
+				<a href="/api/Db4odoc">Db4odoc</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview">
+				<a href="/api/Db4odoc.Tutorial">Db4odoc<wbr>.Tutorial</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview">
+				<a href="/api/Db4odoc.Tutorial.F1">Db4odoc<wbr>.Tutorial<wbr>.F1</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Db4odoc.Tutorial.F1.Chapter1">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter1</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter10">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter10</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter2">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter2</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter3">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter3</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter4">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter4</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter5">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter5</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter6">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter6</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter7">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter7</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter8">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter8</a></li>
+			<li><a href="/api/Db4odoc.Tutorial.F1.Chapter9">Db4odoc<wbr>.Tutorial<wbr>.F1<wbr>.Chapter9</a></li>
+</ul></li></ul></li></ul></li>			<li><a href="/api/global">global</a></li>
+
+				<li class="treeview">
+				<a href="/api/Sharpen">Sharpen</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Sharpen.IO">Sharpen<wbr>.IO</a></li>
+			<li><a href="/api/Sharpen.Lang">Sharpen<wbr>.Lang</a></li>
+			<li><a href="/api/Sharpen.Net">Sharpen<wbr>.Net</a></li>
+			<li><a href="/api/Sharpen.Text">Sharpen<wbr>.Text</a></li>
+			<li><a href="/api/Sharpen.Util">Sharpen<wbr>.Util</a></li>
+</ul></li>      
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>Db4objects<wbr>.Db4o<wbr>.Foundation <small>Namespace</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+
+
+			<h1 id="ClassTypes">Class Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Class</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/AbstractTreeIterator">AbstractTreeIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Algorithms4">Algorithms4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ArrayIterator4">ArrayIterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Arrays4">Arrays4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/AutoStopWatch">AutoStopWatch</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BitMap4">BitMap4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BlockingQueue">BlockingQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BlockingQueueStoppedException">Blocking<wbr>Queue<wbr>Stopped<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/BooleanByRef">BooleanByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ByRef">ByRef</a></td>
+									<td>Useful as "out" or "by reference" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CircularBuffer4">CircularBuffer4</a></td>
+									<td>A fixed size double ended queue with O(1) complexity for addFirst, removeFirst and removeLast operations.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CircularIntBuffer4">CircularIntBuffer4</a></td>
+									<td>A fixed size double ended queue with O(1) complexity for addFirst, removeFirst and removeLast operations.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CircularLongBuffer4">CircularLongBuffer4</a></td>
+									<td>A fixed size double ended queue with O(1) complexity for addFirst, removeFirst and removeLast operations.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Coercion4">Coercion4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Collection4">Collection4</a></td>
+									<td>Fast linked list for all usecases.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Collection4Iterator">Collection4Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Collections4">Collections4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CompositeIterable4">CompositeIterable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CompositeIterator4">CompositeIterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/CRC32">CRC32</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/DelegatingBlockingQueue">Delegating<wbr>Blocking<wbr>Queue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/DynamicVariable">DynamicVariable</a></td>
+									<td>A dynamic variable is a value associated to a specific thread and scope.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/EnumerateIterator">EnumerateIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Environments">Environments</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/FilteredIterator">FilteredIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/FlatteningIterator">FlatteningIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/FunctionApplicationIterator">Function<wbr>Application<wbr>Iterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashSet4">HashSet4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Hashtable4">Hashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableBase">HashtableBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableIdentityEntry">Hashtable<wbr>Identity<wbr>Entry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableIntEntry">HashtableIntEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableIterator">HashtableIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableLongEntry">HashtableLongEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/HashtableObjectEntry">HashtableObjectEntry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IdentityHashtable4">IdentityHashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IdentitySet4">IdentitySet4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IndexedIterator">IndexedIterator</a></td>
+									<td>
+    Basic functionality for implementing iterators for
+    fixed length structures whose elements can be efficiently
+    accessed by a numeric index.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntArrayByRef">IntArrayByRef</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntArrayList">IntArrayList</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntByRef">IntByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIdGenerator">IntIdGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIterator4Adaptor">IntIterator4Adaptor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIterator4Impl">IntIterator4Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IntIterators">IntIterators</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/InvalidIteratorException">Invalid<wbr>Iterator<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Iterable4Adaptor">Iterable4Adaptor</a></td>
+									<td>
+    Adapts Iterable4/Iterator4 iteration model (moveNext, current) to the old db4o
+    and jdk model (hasNext, next).
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Iterator4Impl">Iterator4Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Iterators">Iterators</a></td>
+									<td>Iterator primitives (concat, map, reduce, filter, etc...).</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/KeySpec">KeySpec</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/KeySpecHashtable4">KeySpecHashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/List4">List4</a></td>
+									<td>simplest possible linked list</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ListenerRegistry">ListenerRegistry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Lock4">Lock4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/LongByRef">LongByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/MappingIterator">MappingIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/My_1">My</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Foundation/My_1#typeparam-TService">TService</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/NativeCollections">NativeCollections</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/No4">No4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/NoDuplicatesQueue">NoDuplicatesQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/NonblockingQueue">NonblockingQueue</a></td>
+									<td>Unbounded queue.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ObjectByRef">ObjectByRef</a></td>
+									<td>Useful as "out" or "by ref" function parameter.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Pair">Pair</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/PausableBlockingQueue">Pausable<wbr>Blocking<wbr>Queue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/PrimitiveCodec">PrimitiveCodec</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Runnable4">Runnable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/RunnableAction">RunnableAction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Runtime4">Runtime4</a></td>
+									<td>A collection of static methods that should be part of the runtime environment but are not.
+    	</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/RuntimeInterruptedException">Runtime<wbr>Interrupted<wbr>Exception</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SignatureGenerator">SignatureGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SimpleObjectPool">SimpleObjectPool</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SimpleTimer">SimpleTimer</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SingleValueIterator">SingleValueIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SortedCollection4">SortedCollection4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Stack4">Stack4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/StopWatch">StopWatch</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SubTypePredicate">SubTypePredicate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SynchronizedHashtable4">Synchronized<wbr>Hashtable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/SynchronizedIterator4">Synchronized<wbr>Iterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TernaryBool">TernaryBool</a></td>
+									<td>yes/no/dontknow data type</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ThreadLocal4">ThreadLocal4</a></td>
+									<td>
+    ThreadLocal implementation for less capable platforms such as JRE 1.1 and
+    Silverlight.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TimeoutBlockingQueue">TimeoutBlockingQueue</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TimeStampIdGenerator">TimeStampIdGenerator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Tree">Tree</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TreeKeyIterator">TreeKeyIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TreeNodeIterator">TreeNodeIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/TreeObject">TreeObject</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="InterfaceTypes">Interface Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Interface</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IArrayFactory">IArrayFactory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IBlock4">IBlock4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IBlockingQueue4">IBlockingQueue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ICancellableVisitor4">ICancellableVisitor4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IClosure4">IClosure4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IComparison4">IComparison4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IDeepClone">IDeepClone</a></td>
+									<td>Deep clone</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IEntry4">IEntry4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IEnvironment">IEnvironment</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IFixedSizeIntIterator4">I<wbr>Fixed<wbr>Size<wbr>Int<wbr>Iterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IFunction4">IFunction4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntComparator">IIntComparator</a></td>
+									<td>
+    Non boxing/unboxing version of
+    <code class="cs">System.Collections.IComparer&lt;T&gt;</code>
+    for
+    faster id comparisons.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntIterator4">IIntIterator4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntObjectVisitor">IIntObjectVisitor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntVisitable">IIntVisitable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IIntVisitor">IIntVisitor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IListener4">IListener4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IMap4">IMap4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IObjectPool">IObjectPool</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IPausableBlockingQueue4">I<wbr>Pausable<wbr>Blocking<wbr>Queue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IPredicate4">IPredicate4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IPreparedComparison">IPreparedComparison</a></td>
+									<td>
+    a prepared comparison, to compare multiple objects
+    with one single object.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IProcedure4">IProcedure4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IQueue4">IQueue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ISequence4">ISequence4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ISet4">ISet4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IShallowClone">IShallowClone</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ISortable4">ISortable4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/ITimeoutBlockingQueue4">I<wbr>Timeout<wbr>Blocking<wbr>Queue4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IVisitable">IVisitable</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/IVisitor4">IVisitor4</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="DelegateTypes">Delegate Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Delegate</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Action4">Action4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Function_2">Function</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Foundation/Function_2#typeparam-A">A</a>, <wbr><a href="/api/Db4objects.Db4o.Foundation/Function_2#typeparam-B">B</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="StructTypes">Struct Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Struct</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation/Tuple_2">Tuple</a><wbr>&lt;<a href="/api/Db4objects.Db4o.Foundation/Tuple_2#typeparam-A">A</a>, <wbr><a href="/api/Db4objects.Db4o.Foundation/Tuple_2#typeparam-B">B</a>&gt;<wbr></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="Namespaces">Namespaces</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Namespace</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation.Collections">Db4objects<wbr>.Db4o<wbr>.Foundation<wbr>.Collections</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.Foundation.IO">Db4objects<wbr>.Db4o<wbr>.Foundation<wbr>.IO</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

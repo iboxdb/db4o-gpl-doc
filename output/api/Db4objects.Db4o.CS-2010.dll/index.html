@@ -1,0 +1,929 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>DB4O GPL API Documentation - API - Db4objects.Db4o.CS-2010.dll Assembly</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>DB4O GPL API Documentation</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+<p><a href="#InterfaceTypes">Interface Types</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+	<li class="header">Assemblies</li>   
+        <li><a href="/api/Db4objects.Db4o-2010.dll">Db4objects<wbr>.Db4o-2010<wbr>.dll</a></li>
+        <li class="selected"><a href="/api/Db4objects.Db4o.CS-2010.dll">Db4objects<wbr>.Db4o<wbr>.CS-2010<wbr>.dll</a></li>
+        <li><a href="/api/Db4objects.Db4o.Linq-2010.dll">Db4objects<wbr>.Db4o<wbr>.Linq-2010<wbr>.dll</a></li>
+        <li><a href="/api/Db4odoc.Tutorial.Chapters-2010.dll">Db4odoc<wbr>.Tutorial<wbr>.Chapters-2010<wbr>.dll</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>Db4objects<wbr>.Db4o<wbr>.CS-2010<wbr>.dll <small>Assembly</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+
+			<h1 id="ClassTypes">Class Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Class</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/CacheContributingObjectReader">Cache<wbr>Contributing<wbr>Object<wbr>Reader</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClassInfo">ClassInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClassInfoHelper">ClassInfoHelper</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientAsynchronousMessageProcessor">Client<wbr>Asynchronous<wbr>Message<wbr>Processor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/ClientConfigurationImpl">Client<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientConnectionEventArgs">Client<wbr>Connection<wbr>Event<wbr>Args</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Events/ClientEventRegistryImpl">Client<wbr>Event<wbr>Registry<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientHeartbeat">ClientHeartbeat</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientObjectContainer">Client<wbr>Object<wbr>Container</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientQueryResult">ClientQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientServerPlatform">ClientServerPlatform</a></td>
+									<td>Platform specific defaults.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Caching/ClientSlotCacheImpl">ClientSlotCacheImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientTransaction">ClientTransaction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientTransactionHandle">Client<wbr>Transaction<wbr>Handle</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ClientTransactionPool">Client<wbr>Transaction<wbr>Pool</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ContainerCount">Client<wbr>Transaction<wbr>Pool<wbr>.ContainerCount</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/CommittedCallbacksDispatcher">Committed<wbr>Callbacks<wbr>Dispatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS/Db4oClientServer">Db4oClientServer</a></td>
+									<td>
+    Factory class to open db4o servers and to connect db4o clients
+    to them.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/Db4oClientServerLegacyConfigurationBridge">Db4o<wbr>Client<wbr>Server<wbr>Legacy<wbr>Configuration<wbr>Bridge</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/DebugCS">DebugCS</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/DeferredObjectExchangeStrategy">Deferred<wbr>Object<wbr>Exchange<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/EagerObjectExchangeStrategy">Eager<wbr>Object<wbr>Exchange<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/EagerObjectWriter">EagerObjectWriter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/FieldInfo">FieldInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/FixedSizeIntIterator4Base">Fixed<wbr>Size<wbr>Int<wbr>Iterator4<wbr>Base</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/InternalServerError">InternalServerError</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/LazyClientIdIterator">LazyClientIdIterator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/LazyClientObjectSetStub">Lazy<wbr>Client<wbr>Object<wbr>Set<wbr>Stub</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/LazyClientQueryResult">Lazy<wbr>Client<wbr>Query<wbr>Result</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/LegacyClientServerFactoryImpl">Legacy<wbr>Client<wbr>Server<wbr>Factory<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassID">MClassID</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassMeta">MClassMeta</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassMetadataIdForName">M<wbr>Class<wbr>Metadata<wbr>Id<wbr>For<wbr>Name</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClassNameForID">MClassNameForID</a></td>
+									<td>get the classname for an internal ID</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MClose">MClose</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCloseSocket">MCloseSocket</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommit">MCommit</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommitReplication">MCommitReplication</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommitSystemTransaction">M<wbr>Commit<wbr>System<wbr>Transaction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommittedCallBackRegistry">M<wbr>Committed<wbr>Call<wbr>Back<wbr>Registry</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCommittedInfo">MCommittedInfo</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MCreateClass">MCreateClass</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MDelete">MDelete</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MDeleteBlobFile">MDeleteBlobFile</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MError">MError</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/MessageEventArgs">MessageEventArgs</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MFailed">MFailed</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGenerateTransactionTimestamp">M<wbr>Generate<wbr>Transaction<wbr>Timestamp</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetAll">MGetAll</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetClasses">MGetClasses</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetInternalIDs">MGetInternalIDs</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MGetThreadID">MGetThreadID</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MIdentity">MIdentity</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MIDList">MIDList</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MInstanceCount">MInstanceCount</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MIsAlive">MIsAlive</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLength">MLength</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLogin">MLogin</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MLoginOK">MLoginOK</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MNull">MNull</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectByUuid">MObjectByUuid</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSet">MObjectSet</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetFetch">MObjectSetFetch</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetFinalized">MObjectSetFinalized</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetGetId">MObjectSetGetId</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetIndexOf">MObjectSetIndexOf</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetReset">MObjectSetReset</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MObjectSetSize">MObjectSetSize</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MOK">MOK</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MPing">MPing</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MPong">MPong</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MPrefetchIDs">MPrefetchIDs</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MProcessDeletes">MProcessDeletes</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MQueryExecute">MQueryExecute</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MQueryResult">MQueryResult</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRaiseCommitTimestamp">M<wbr>Raise<wbr>Commit<wbr>Timestamp</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadBlob">MReadBlob</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadBytes">MReadBytes</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadMultipleObjects">MReadMultipleObjects</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadObject">MReadObject</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadReaderById">MReadReaderById</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReadSlot">MReadSlot</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MReleaseSemaphore">MReleaseSemaphore</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRequestExceptionWithoutResponse">M<wbr>Request<wbr>Exception<wbr>Without<wbr>Response</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRequestExceptionWithResponse">M<wbr>Request<wbr>Exception<wbr>With<wbr>Response</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRollback">MRollback</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MRuntimeException">MRuntimeException</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSetSemaphore">MSetSemaphore</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/Msg">Msg</a></td>
+									<td>Messages for Client/Server Communication</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgBlob">MsgBlob</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgD">MsgD</a></td>
+									<td>Messages with Data for Client/Server Communication</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgObject">MsgObject</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MsgQuery">MsgQuery</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSuccess">MSuccess</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSwitchToFile">MSwitchToFile</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MSwitchToMainFile">MSwitchToMainFile</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MTaDelete">MTaDelete</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MTaIsDeleted">MTaIsDeleted</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MUseDefaultTransactionTimestamp">M<wbr>Use<wbr>Default<wbr>Transaction<wbr>Timestamp</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MUserMessage">MUserMessage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/UserMessagePayload">MUserMessage<wbr>.UserMessagePayload</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MUseTransaction">MUseTransaction</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MVersion">MVersion</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MVersionForId">MVersionForId</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteBatchedMessages">M<wbr>Write<wbr>Batched<wbr>Messages</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteBlob">MWriteBlob</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteNew">MWriteNew</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/MWriteUpdate">MWriteUpdate</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/NetworkingConfigurationImpl">Networking<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/NetworkingConfigurationProviderImpl">Networking<wbr>Configuration<wbr>Provider<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/NetworkServerSocket">NetworkServerSocket</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/NetworkServerSocketBase">Network<wbr>Server<wbr>Socket<wbr>Base</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/NetworkSocket">NetworkSocket</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/NetworkSocketBase">NetworkSocketBase</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Caching/NullClientSlotCache">NullClientSlotCache</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/ObjectExchangeConfiguration">Object<wbr>Exchange<wbr>Configuration</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/ObjectExchangeStrategyFactory">Object<wbr>Exchange<wbr>Strategy<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ObjectServerImpl">ObjectServerImpl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ServerClosedEventArgs">Server<wbr>Closed<wbr>Event<wbr>Args</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/ServerConfigurationImpl">Server<wbr>Configuration<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ServerMessageDispatcherImpl">Server<wbr>Message<wbr>Dispatcher<wbr>Impl</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/ServerSocket4Decorator">Server<wbr>Socket4<wbr>Decorator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/ShutdownMode">ShutdownMode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/FatalMode">ShutdownMode<wbr>.FatalMode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/NormalMode">ShutdownMode<wbr>.NormalMode</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/SingleMessagePrefetchingStrategy">Single<wbr>Message<wbr>Prefetching<wbr>Strategy</a></td>
+									<td>Prefetchs multiples objects at once (in a single message).</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/SlotCollector">SlotCollector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/Socket4Adapter">Socket4Adapter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/Socket4Decorator">Socket4Decorator</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Config/StandardClientServerFactory">Standard<wbr>Client<wbr>Server<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/StandardReferenceCollector">Standard<wbr>Reference<wbr>Collector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/StandardSlotAccessor">StandardSlotAccessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/StandardSocket4Factory">Standard<wbr>Socket4<wbr>Factory</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="InterfaceTypes">Interface Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Interface</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IMessageListener">Client<wbr>Object<wbr>Container<wbr>.IMessageListener</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IBroadcastFilter">IBroadcastFilter</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/IClientConfiguration">IClientConfiguration</a></td>
+									<td>Configuration interface for db4o networking clients.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/IClientConfigurationItem">I<wbr>Client<wbr>Configuration<wbr>Item</a></td>
+									<td>
+    Implement this interface for configuration items that encapsulate
+    a batch of configuration settings or that need to be applied
+    to ClientObjectContainers after they are opened.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IClientConnection">IClientConnection</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IClientMessageDispatcher">I<wbr>Client<wbr>Message<wbr>Dispatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/IClientServerFactory">IClientServerFactory</a></td>
+									<td>factory to open C/S server and client implementations.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IClientSideMessage">IClientSideMessage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Caching/IClientSlotCache">IClientSlotCache</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessage">IMessage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessageDispatcher">IMessageDispatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IMessageWithResponse">IMessageWithResponse</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/INetworkingConfiguration">I<wbr>Networking<wbr>Configuration</a></td>
+									<td>
+    Configuration interface for networking configuration settings.<br><br>
+    The network settings should be configured in exactly the same on the server and client.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/INetworkingConfigurationProvider">I<wbr>Networking<wbr>Configuration<wbr>Provider</a></td>
+									<td>
+    A configuration provider that provides access to the
+    networking configuration methods.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/IObjectExchangeStrategy">I<wbr>Object<wbr>Exchange<wbr>Strategy</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IObjectServerEvents">IObjectServerEvents</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IPrefetchingStrategy">IPrefetchingStrategy</a></td>
+									<td>Defines a strategy on how to prefetch objects from the server.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/IReferenceCollector">IReferenceCollector</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/IServerConfiguration">IServerConfiguration</a></td>
+									<td>Configuration interface for db4o servers.</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Config/IServerConfigurationItem">I<wbr>Server<wbr>Configuration<wbr>Item</a></td>
+									<td>
+    Implement this interface for configuration items that encapsulate
+    a batch of configuration settings or that need to be applied
+    to ObjectServers after they are opened.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal/IServerMessageDispatcher">I<wbr>Server<wbr>Message<wbr>Dispatcher</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Messages/IServerSideMessage">IServerSideMessage</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/IServerSocket4">IServerSocket4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Internal.Objectexchange/ISlotAccessor">ISlotAccessor</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/ISocket4">ISocket4</a></td>
+									<td></td>
+							</tr>
+							<tr>
+								<td><a href="/api/Db4objects.Db4o.CS.Foundation/ISocket4Factory">ISocket4Factory</a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

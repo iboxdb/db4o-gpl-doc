@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>DB4O GPL API Documentation - API - IQueryResultIteratorFactory Interface</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>DB4O GPL API Documentation</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Methods">Methods</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Db4objects.Db4o-2010.dll">Db4objects<wbr>.Db4o-2010<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Db4objects.Db4o.Internal">Db4objects<wbr>.Db4o<wbr>.Internal</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Db4objects.Db4o.Internal/AbstractBufferContext">Abstract<wbr>Buffer<wbr>Context</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ArrayType">ArrayType</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/BlobImpl">BlobImpl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/BlockSizeBlockConverter">Block<wbr>Size<wbr>Block<wbr>Converter</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ByteArrayBuffer">ByteArrayBuffer</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/CallBackMode">CallBackMode</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/CallbackObjectInfoCollections">Callback<wbr>Object<wbr>Info<wbr>Collections</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassAspect">ClassAspect</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassMetadata">ClassMetadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassMetadataIterator">Class<wbr>Metadata<wbr>Iterator</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ClassMetadataRepository">Class<wbr>Metadata<wbr>Repository</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/CommitTimestampFieldMetadata">Commit<wbr>Timestamp<wbr>Field<wbr>Metadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/CommitTimestampSupport">Commit<wbr>Timestamp<wbr>Support</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Config4Abstract">Config4Abstract</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Config4Class">Config4Class</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Config4Field">Config4Field</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Config4Impl">Config4Impl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Const4">Const4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/DefragmentContextImpl">Defragment<wbr>Context<wbr>Impl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/DeleteInfo">DeleteInfo</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/DisabledBlockConverter">Disabled<wbr>Block<wbr>Converter</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/EventDispatchers">EventDispatchers</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Exceptions4">Exceptions4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ExternalObjectContainer">External<wbr>Object<wbr>Container</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldIndexException">FieldIndexException</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FieldMetadata">FieldMetadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/FrozenObjectInfo">FrozenObjectInfo</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/HandlerRegistry">HandlerRegistry</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Handlers4">Handlers4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/HandlerVersionRegistry">Handler<wbr>Version<wbr>Registry</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/HardObjectReference">HardObjectReference</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Identifiable">Identifiable</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IDGenerator">IDGenerator</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IDHandler">IDHandler</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IllegalComparisonException">Illegal<wbr>Comparison<wbr>Exception</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/InterfaceTypeHandler">InterfaceTypeHandler</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IntMatcher">IntMatcher</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IoAdaptedObjectContainer">Io<wbr>Adapted<wbr>Object<wbr>Container</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/LazyObjectReference">LazyObjectReference</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/LocalObjectContainer">LocalObjectContainer</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/LocalPersistentBase">LocalPersistentBase</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/LocalTransaction">LocalTransaction</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/LockedTree">LockedTree</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/MarshallingBuffer">MarshallingBuffer</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Messages">Messages</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Null">Null</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/NullFieldMetadata">NullFieldMetadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/NullTransactionListener">Null<wbr>Transaction<wbr>Listener</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectContainerBase">ObjectContainerBase</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectContainerFactory">Object<wbr>Container<wbr>Factory</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectContainerSession">Object<wbr>Container<wbr>Session</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectID">ObjectID</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectInfoCollectionImpl">Object<wbr>Info<wbr>Collection<wbr>Impl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectReference">ObjectReference</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ObjectTypeMetadata">ObjectTypeMetadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/OpenTypeHandler">OpenTypeHandler</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/PersistentBase">PersistentBase</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/PersistentIntegerArray">Persistent<wbr>Integer<wbr>Array</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Platform4">Platform4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/PreparedArrayContainsComparison">Prepared<wbr>Array<wbr>Contains<wbr>Comparison</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/PrimitiveTypeMetadata">Primitive<wbr>Type<wbr>Metadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ReflectException">ReflectException</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Reflection4">Reflection4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ReflectorConfigurationImpl">Reflector<wbr>Configuration<wbr>Impl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ReflectPlatform">ReflectPlatform</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Renames">Renames</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/SerializedGraph">SerializedGraph</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Serializer">Serializer</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/SharedIndexedFields">SharedIndexedFields</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/StatefulBuffer">StatefulBuffer</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/StoredClassImpl">StoredClassImpl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/StoredFieldImpl">StoredFieldImpl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/SystemData">SystemData</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/SystemInfoFileImpl">SystemInfoFileImpl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TagAttribute">TagAttribute</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/Transaction">Transaction</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TransactionContext">TransactionContext</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TransactionLocal">TransactionLocal</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TranslatedAspect">TranslatedAspect</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TransportObjectContainer">Transport<wbr>Object<wbr>Container</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TreeInt">TreeInt</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TreeIntObject">TreeIntObject</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TreeReader">TreeReader</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TypeHandlerAspect">TypeHandlerAspect</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TypeHandlerCloneContext">Type<wbr>Handler<wbr>Clone<wbr>Context</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/TypeHandlerConfiguration">Type<wbr>Handler<wbr>Configuration</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/UUIDFieldMetadata">UUIDFieldMetadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/VersionFieldMetadata">VersionFieldMetadata</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/VirtualAttributes">VirtualAttributes</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/VirtualFieldMetadata">VirtualFieldMetadata</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IBlockConverter">IBlockConverter</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IBuiltinTypeHandler">IBuiltinTypeHandler</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ICallbackInfoCollector">I<wbr>Callback<wbr>Info<wbr>Collector</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ICanExcludeNullInQueries">I<wbr>Can<wbr>Exclude<wbr>Null<wbr>In<wbr>Queries</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ICommittedCallbackDispatcher">I<wbr>Committed<wbr>Callback<wbr>Dispatcher</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IComparable4">IComparable4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IDb4oTypeImpl">IDb4oTypeImpl</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IDefragmentContext">IDefragmentContext</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IEventDispatcher">IEventDispatcher</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IIndexable4">IIndexable4</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IIndexableTypeHandler">I<wbr>Indexable<wbr>Type<wbr>Handler</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IInternalObjectContainer">I<wbr>Internal<wbr>Object<wbr>Container</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ILinkLengthAware">ILinkLengthAware</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IModificationAware">IModificationAware</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IObjectContainerSpec">IObjectContainerSpec</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IPersistent">IPersistent</a></li>
+				<li class="selected"><a href="/api/Db4objects.Db4o.Internal/IQueryResultIteratorFactory">I<wbr>Query<wbr>Result<wbr>Iterator<wbr>Factory</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IReadable">IReadable</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IReadsObjectIds">IReadsObjectIds</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IReadWriteable">IReadWriteable</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IReadWriteBuffer">IReadWriteBuffer</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ISlotCopyHandler">ISlotCopyHandler</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/ITransactionParticipant">I<wbr>Transaction<wbr>Participant</a></li>
+				<li><a href="/api/Db4objects.Db4o.Internal/IVersionedTypeHandler">I<wbr>Versioned<wbr>Type<wbr>Handler</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>I<wbr>Query<wbr>Result<wbr>Iterator<wbr>Factory <small>Interface</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Db4objects.Db4o-2010.dll">Db4objects<wbr>.Db4o-2010<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Db4objects.Db4o.Internal">Db4objects<wbr>.Db4o<wbr>.Internal</a></dd>
+											
+							
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph BT
+	Type["IQueryResultIteratorFactory"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public interface IQueryResultIteratorFactory</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Db4objects.Db4o.Internal/IQueryResultIteratorFactory/F64306D2">NewInstance<wbr>(<wbr>Abstract<wbr>Query<wbr>Result)<wbr></a></td>
+								<td>IEnumerator</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>
