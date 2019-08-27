@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/db4o-gpl-doc/output/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/db4o-gpl-doc/output/assets/img/favicon.ico" type="image/x-icon">
-        <title>DB4O GPL API Documentation - API - IBin Interface</title>
+        <title>DB4O GPL API Documentation https://github.com/iboxdb/db4o-gpl - API - IBin Interface</title>
         <link href="/db4o-gpl-doc/output/assets/css/highlight.css" rel="stylesheet">
         <link href="/db4o-gpl-doc/output/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/db4o-gpl-doc/output/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -36,7 +36,7 @@
             <header class="main-header">   
                      
                 <a href="/db4o-gpl-doc/output/" class="logo">
-                            <span>DB4O GPL API Documentation</span>
+                            <span>DB4O GPL API Documentation https://github.com/iboxdb/db4o-gpl</span>
                 </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
@@ -204,14 +204,14 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/SynchronizedBin">SynchronizedBin</a></li>								
 											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/FileBin">FileStorage<wbr>.FileBin</a></li>								
 											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/ThreadedSyncBin">ThreadedSyncBin</a></li>								
-											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/SynchronizedBin">SynchronizedBin</a></li>								
 											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/PagingMemoryBin">PagingMemoryBin</a></li>								
-											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BlockAwareBin">BlockAwareBin</a></li>								
 											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/MemoryBin">MemoryBin</a></li>								
-											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/ReadOnlyBin">ReadOnlyBin</a></li>								
 											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BinDecorator">BinDecorator</a></li>								
+											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/ReadOnlyBin">ReadOnlyBin</a></li>								
+											<li><a href="/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BlockAwareBin">BlockAwareBin</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -221,22 +221,22 @@
 							graph BT
 	Type["IBin"]
 class Type type-node
-	Implementing0["FileStorage.FileBin"]-.-&gt;Type
-	click Implementing0 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/FileBin"
-	Implementing1["ThreadedSyncBin"]-.-&gt;Type
-	click Implementing1 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/ThreadedSyncBin"
-	Implementing2["SynchronizedBin"]-.-&gt;Type
-	click Implementing2 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/SynchronizedBin"
+	Implementing0["SynchronizedBin"]-.-&gt;Type
+	click Implementing0 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/SynchronizedBin"
+	Implementing1["FileStorage.FileBin"]-.-&gt;Type
+	click Implementing1 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/FileBin"
+	Implementing2["ThreadedSyncBin"]-.-&gt;Type
+	click Implementing2 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/ThreadedSyncBin"
 	Implementing3["PagingMemoryBin"]-.-&gt;Type
 	click Implementing3 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/PagingMemoryBin"
-	Implementing4["BlockAwareBin"]-.-&gt;Type
-	click Implementing4 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BlockAwareBin"
-	Implementing5["MemoryBin"]-.-&gt;Type
-	click Implementing5 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/MemoryBin"
+	Implementing4["MemoryBin"]-.-&gt;Type
+	click Implementing4 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/MemoryBin"
+	Implementing5["BinDecorator"]-.-&gt;Type
+	click Implementing5 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BinDecorator"
 	Implementing6["ReadOnlyBin"]-.-&gt;Type
 	click Implementing6 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/ReadOnlyBin"
-	Implementing7["BinDecorator"]-.-&gt;Type
-	click Implementing7 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BinDecorator"
+	Implementing7["BlockAwareBin"]-.-&gt;Type
+	click Implementing7 "/db4o-gpl-doc/output/api/Db4objects.Db4o.IO/BlockAwareBin"
 
 						</div>
 					</div>

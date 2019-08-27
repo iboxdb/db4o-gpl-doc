@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
 	<channel>
-		<title>DB4O GPL API Documentation</title>
+		<title>DB4O GPL API Documentation https://github.com/iboxdb/db4o-gpl</title>
 		<link>https://iboxdb.github.io/db4o-gpl-doc/output</link>
 		<description />
 		<copyright>2019</copyright>
-		<pubDate>Tue, 27 Aug 2019 11:29:55 GMT</pubDate>
-		<lastBuildDate>Tue, 27 Aug 2019 11:29:55 GMT</lastBuildDate>
+		<pubDate>Tue, 27 Aug 2019 12:27:57 GMT</pubDate>
+		<lastBuildDate>Tue, 27 Aug 2019 12:27:57 GMT</lastBuildDate>
 	</channel>
 </rss>
