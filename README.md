@@ -5,4 +5,6 @@
 ### JAVA Docs [Db4oEmbedded](https://iboxdb.github.io/db4o-gpl-doc/javadoc/com/db4o/Db4oEmbedded.html)
 
 
+
+[https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png](https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png)
 ![](https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png)
