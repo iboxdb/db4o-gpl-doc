@@ -7,4 +7,6 @@
 
 
 [https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png](https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png)
+
+
 ![](https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png)
