@@ -6,6 +6,9 @@
 
 
 
+[Download Binaries](https://github.com/iboxdb/db4o-gpl-doc/tree/master/Binaries/20190916)
+
+
 [https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png](https://iboxdb.github.io/db4o-gpl-doc/images/db4o_gpl.png)
 
 
