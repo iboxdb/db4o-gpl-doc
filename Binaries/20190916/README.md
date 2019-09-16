@@ -3,6 +3,7 @@
 
 ### Java ObjectManager
 ```
+Download dist.zip
 cd dist
 java -jar ObjectManager.jar
 ```
@@ -10,6 +11,7 @@ java -jar ObjectManager.jar
 
 ### .NET ObjectManager
 ```
+Download Release.zip
 cd Release
 mono ObjectManager.exe
 ```
