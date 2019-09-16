@@ -1,5 +1,5 @@
 
-## DB4O Object Manager GPL Binaries 8.1.2
+## DB4O Object Manager GPL Binaries 8.1.x
 
 ### Java ObjectManager
 ```
