@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iBoxDB Online</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+ 	<meta name="description" content="Embedded JavaScript Database iBoxDB online" />
+        <meta name="keywords" content="iboxdb,nosql,database,static site,HTML,web development,.NET,C#,Markdown,YAML" />
+      
+        <script type="text/javascript">
+            var main = null;
+            var test2 = null;
+            var test_db_online = null;
+            function run_script() {
+                console.log(txtjs.value);
+                let o = test_db_online(txtjs.value);
+                console.log(o);
+                txtout.value = JSON.stringify(o, (k, v) => {
+                    if (typeof (v) == "bigint")
+                        return Number(v);
+                    else if (v instanceof Error)
+                        return v.toString();
+                    else
+                        return v;
+                }, 2);
+            }
+        </script>
+        <script type="module">
+            import {main as _main} from './teavm/classes.js';
+            import {test2 as _test2, test_db_online as _test_db_online} from './test_iboxdb.js';
+            main = _main;
+            test2 = _test2;
+            test_db_online = _test_db_online;
+        </script>
+    </head>
+    <body onload="main()"> 
+
+        <div id="jsdiv" style="display: grid">
+            <textarea id="txtjs" rows="20" spellcheck="false" autocomplete="off" >
+let js = new JsBox();          
+let cfg = js.get_config();
+cfg.ensure_table({"id":0n}, "table", "id");
+js.open();
+let obj = {};
+//Begin Write Code Here
+obj.name = "my-name";
+obj.items = [ {"item_id":33n}, {"item_id":66n,"pro_version":true} ];
+//End
+obj.id = js.new_id();
+js.insert("table",obj);
+js.select("from table limit 0, 10" );  
+            </textarea>
+            <button onclick="run_script()">Run Script</button>
+            <textarea id="txtout" rows="20" spellcheck="false" autocomplete="off" >
+                
+            </textarea>
+        </div>
+    </body>
+</html>
