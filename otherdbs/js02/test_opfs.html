@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iBoxDB OPFS JavaScript Embedded NoSQL Database online</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="JavaScript Embedded NoSQL Database,iBoxDB OPFS online." />
+    <meta name="keywords" content="iBoxDB,NoSQL,JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+        var run_script = null;
+    </script>
+    <script type="module">
+        import { test_db_online, help } from './test_iboxdb_opfs.js';
+        run_script = async function () {
+            //console.log(txtjs.value);
+            let o = await test_db_online(txtjs.value);
+            //console.log(o);
+            txtout.value = JSON.stringify(o, (k, v) => {
+                if (typeof (v) == "bigint")
+                    return Number(v);
+                else if (v instanceof Error)
+                    return v.toString();
+                else
+                    return v;
+            }, 2);
+        }
+        setTimeout(
+            () => {
+                txtout.value = help();
+            }
+            , 500);
+    </script>
+</head>
+
+<body>
+    <div id="jsdiv" style="display: grid">
+        <textarea id="txtjs" rows="20" spellcheck="false" autocomplete="off">
+const addr = 2; 
+JsBoxAsync[addr] = JsBoxAsync[addr] ?? new JsBoxAsync(addr);
+let js = JsBoxAsync[addr];          
+let cfg = await js.get_config();
+await cfg.ensure_table({"id":BigInt(0)}, "table", "id");
+await js.open();
+let obj = {};
+//Begin Write Code Here
+obj.value = 100
+obj.items = [ {"item_id":33n}, {"item_id":66n,"pro_version":true} ];
+//End
+obj.id = await js.new_id();
+await js.insert("table",obj);
+let re = await js.select("from table limit 0, 10" ); 
+let debug_del_db = false;
+if (debug_del_db){
+    await js.close(); await db_debug_deletefile(addr);
+    JsBoxAsync[addr] = undefined;
+}
+return re;
+        </textarea>
+        <button onclick="(async ()=>{ await run_script(); })()">Run Script</button>
+        <textarea id="txtout" rows="20" spellcheck="false" autocomplete="off">
+
+        </textarea>
+    </div>
+</body>
+
+</html>
