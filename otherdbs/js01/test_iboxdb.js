@@ -1,13 +1,9 @@
 
 
-
-console.log("===============================")
-console.log("iBoxDB.Java & TeaVM JavaScript!")
-console.log("===============================")
-
-import { JsBox, JsBoxConfig,
-        ConfigVariable, db_root, db_debug_deletefile,
-        InMemoryStore, print, pause, is_node } from "./load_iboxdb.js";
+import {JsBox, JsBoxConfig,
+        db_debug_deletefile,
+        print, pause, is_node
+        } from "./load_iboxdb.js";
 
 
 const nf = (n) => {
@@ -15,9 +11,20 @@ const nf = (n) => {
     return new Intl.NumberFormat().format(n);
 }
 
+export function help() {
+    let o = [];
+    o.push(JsBox.prototype.insert.toString());
+    o.push(JsBox.prototype.update.toString());
+    o.push(JsBox.prototype.replace.toString());
+    o.push(JsBox.prototype.delete.toString());
+    o.push(JsBox.prototype.get.toString());
+    o.push(JsBox.prototype.select.toString());
+    o.push(JsBox.prototype.count.toString());
+    return o.join("\r\n");
+}
+
 export function test_db_online(script) {
     try {
-        //InMemoryStore.bufs
         let o = eval(script);
         return o;
     } catch (e) {
@@ -25,6 +32,9 @@ export function test_db_online(script) {
     }
 }
 export function test2() {
+    print("===============================")
+    print("iBoxDB.Java & TeaVM JavaScript!")
+    print("===============================")
 
     // Prototype
     const proto = {"id": BigInt(0), "value": String("_"), "ver": BigInt(0)}
@@ -34,7 +44,6 @@ export function test2() {
 
     const db_address = 19
 
-    db_root("../DBRoot");
     db_debug_deletefile(db_address);
 
     let js = new JsBox(db_address)
@@ -47,6 +56,9 @@ export function test2() {
     cfg.ensure_increment(proto, "table", "ver");
 
     js.open();
+    if (js.count("from table") != 0) {
+        print("has old data.");
+    }
     let re_select = 2
     let total = 500
 
@@ -56,7 +68,7 @@ export function test2() {
     } else {
         total = 2000;
     }
-//total = 10
+    //total = 10
 
     let begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
@@ -167,7 +179,7 @@ export function test2() {
     get_count = 0
 
 
-//Re-Open
+    //Re-Open
     js.close();
     js = null
 

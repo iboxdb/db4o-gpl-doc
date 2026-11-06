@@ -3,70 +3,51 @@
 
 // ===== JavaScript IO System =====
 
-export var ConfigVariable = {
+var ConfigVariable = {
 
     CacheLength: 1024n * 1024n * 64n,
+    // Bigger IncSize less calling Resize()
     FileIncSize: 1024n * 1024n * 1n,
-    SwapFileBuffer: 1024n * 512n,
-}
+    // In Memory, Disable the SwapFile.
+    SwapFileBuffer: 0n
+};
 
-// In Memory, Disable the SwapFile.
-ConfigVariable.SwapFileBuffer = 0;
-class WasmDatabaseConfig {
-
-    CacheLength() {
-        //console.log("Log:CacheLength");
-        return BigInt(ConfigVariable.CacheLength);
-    }
-    FileIncSize() {
-        //console.log("Log:FileIncSize");
-        return BigInt(ConfigVariable.FileIncSize);
-    }
-    SwapFileBuffer() {
-        //console.log("Log:SwapFileBuffer");
-        return BigInt(ConfigVariable.SwapFileBuffer);
-    }
-
-    CreateStream(path, access) {
-        //console.log("Log:CreateStream", path, access);
-        return new WasmBStream(this, path, access);
-    }
-    ExistsStream(path) {
-        //console.log("Log:ExistsStream", path);
-        return InMemoryStore.bufs.hasOwnProperty(path);
-    }
-
-    DeleteStream(path) {
-        //console.log("Log:DeleteStream ", path);
-        let bf = [];
-        for (let p in InMemoryStore.bufs) {
-            if (String(p).lastIndexOf(path) > -1) {
-                bf.push(p);
-            }
-        }
-        for (let p of bf) {
-            //console.log("Log:Delete ", p);
-            InMemoryStore.bufs[p] = undefined;
-        }
-        return true;
-    }
-    Root(path) {
-        //console.log("Log:Root ", path);
-        return path;
-    }
-}
-
-export class InMemoryStore {
+class InMemoryStore {
     static bufs = {}
     static get(path) {
-        let o = this.bufs[path] ?? new ArrayBuffer(0, {maxByteLength: 1024 * 1024 * 1024 * 2 - 128});
+        let o = this.bufs[path] ?? new ArrayBuffer(0, { maxByteLength: 1024 * 1024 * 1024 * 2 - 128 });
         this.bufs[path] = o;
         return o;
     }
 }
+
+class WasmDatabaseConfig {
+
+    CacheLength() {
+        return BigInt(ConfigVariable.CacheLength);
+    }
+    FileIncSize() {
+        return BigInt(ConfigVariable.FileIncSize);
+    }
+    SwapFileBuffer() {
+        return BigInt(ConfigVariable.SwapFileBuffer);
+    }
+
+    CreateStream(path, access) {
+        return new WasmBStream(this, path, access);
+    }
+    ExistsStream(path) {
+        return InMemoryStore.bufs.hasOwnProperty(path);
+    }
+
+    DeleteStream(path) {
+        InMemoryStore.bufs[path]?.resize(0);
+        return true;
+    }
+}
+
 class WasmBStream {
     constructor(_cfg, _path, _access) {
-        //console.log("Log:WasmBStream constructor", _path);
         this.cfg = _cfg;
         this.path = _path;
         this.access = _access;
@@ -76,7 +57,6 @@ class WasmBStream {
     }
 
     Read(position, buffer, offset, count) {
-        //console.log("Log:WasmBStream Read", this.path, buffer.constructor.name, position, offset, count, this.int8View.length);
         let mlen = BigInt(this.int8View.length) - position;
         count = count > mlen ? mlen : count;
         buffer.set(this.int8View.subarray(Number(position), Number(position + count)), Number(offset));
@@ -84,7 +64,6 @@ class WasmBStream {
     }
 
     Write(position, buffer, offset, count) {
-        //console.log("Log:WasmBStream Write", this.path, buffer.constructor.name, position, offset, count, this.int8View.length);
         let fmax = position + count + 8n;
         if (this.int8View.length < fmax) {
             this.SetLength(fmax);
@@ -93,31 +72,20 @@ class WasmBStream {
     }
 
     Length() {
-        //console.log("Log:WasmBStream Length", this.path);
         return BigInt(this.int8View.length);
     }
 
     SetLength(value) {
-        //console.log("Log:WasmBStream SetLength", this.path, value);
         // value would be Zero!
         this.buf.resize(Number(value));
     }
 
-    Flush() {
-        //console.log("Log:WasmBStream Flush", this.path);
-        // Directly write to FileIO
-        // no cache or buffer to flush.
-    }
-
-    Dispose() {
-        //console.log("Log:WasmBStream Dispose", this.path);
-        // Dispose() might be called many times.
-    }
 }
 
+
 // ===== Wasm VM =====
-import { InitWasmDatabaseConfigObject }  from "./teavm/classes.js";
-const {DBHelper, DBWasm} = InitWasmDatabaseConfigObject(new WasmDatabaseConfig());
+import { InitWasmDatabaseConfigObject } from "./teavm/classes.js";
+const { DBHelper, DBWasm } = InitWasmDatabaseConfigObject(new WasmDatabaseConfig());
 
 // ===== export functions =====
 export function print(...msg) {
@@ -140,9 +108,7 @@ export async function pause(msg) {
 export function db_echo(obj) {
     return DBHelper().echo(obj);
 }
-export function db_root(path) {
-    return DBHelper().db_root(path);
-}
+
 export function db_debug_deletefile(addr) {
     return DBHelper().db_debug_deletefile(addr);
 }
@@ -330,7 +296,7 @@ if (is_main()) {
         ConfigVariable.CacheLength = ConfigVariable.FileIncSize = ConfigVariable.SwapFileBuffer = 1;
 
         print(db_echo([undefined, null, true, 2, 3.3, 4n, "5_5", new Date(),
-            {"id": 88n, "dd": new Uint8Array([88, 99])},
+            { "id": 88n, "dd": new Uint8Array([88, 99]) },
             new Int8Array([5, 6, 255, 254, 253])]));
 
         let def_proto = {
@@ -341,12 +307,11 @@ if (is_main()) {
             "dt": new Date(),
             "isGood": Boolean(true),
             "file": new Uint8Array([3, 255, 254, 253, 4]),
-            "ar": [3, 4, {"id": 18, "nogood": false}, {"id": 19n, "vv": "OK"}],
+            "ar": [3, 4, { "id": 18, "nogood": false }, { "id": 19n, "vv": "OK" }],
         }
-        print(db_echo({"id": 88n}));
+        print(db_echo({ "id": 88n }));
         print(db_echo(def_proto));
 
-        print(db_root("../data"));
         print(db_debug_deletefile(99n));
         print(db_debug_deletefile(1));
 
@@ -357,7 +322,7 @@ if (is_main()) {
         cfg.ensure_index(def_proto, "table", false, "name", "val");
         cfg.ensure_increment(def_proto, "table", "version");
         print(jsBox.open().toString());
-        let a = {...def_proto};
+        let a = { ...def_proto };
         a.id = jsBox.new_id();
         print(jsBox.insert("table", a));
         print(jsBox.count("table"), jsBox.select("table"));

@@ -14,18 +14,11 @@ export async function db_echo(obj) {
     return worker_call(w, db_echo.name, arguments);
 }
 
-export async function db_root(path) {
-    if (path != null && path != undefined) {
-        db_root._path = path;
-    }
-    return db_root._path;
-}
-db_root._path = "";
 
 export async function db_debug_deletefile(addr) {
     lock(addr);
     let w = create_worker();
-    let r = await worker_call(w, db_debug_deletefile.name, [db_root._path, ...arguments]);
+    let r = await worker_call(w, db_debug_deletefile.name, ["", ...arguments]);
     w.terminate();
     unlock(addr);
     return r;
@@ -62,14 +55,14 @@ export class JsBoxAsync {
         }
         if (this.#db == null) {
             this.#db = create_worker();
-            let o = await worker_call(this.#db, "DBWasm", [db_root._path, this.#addr]);
+            let o = await worker_call(this.#db, "DBWasm", ["", this.#addr]);
             // return "No modification allowed" when the Browser to limit too many files operation.
             // if using only one database, this wouldn't happen.
-            // but if doing mutiple databases test, this will happen.
+            // but if open the same page in two Tabs, or one Tab but back and forward, this will happen.
             // because can't open files, then will get "can't access property ..." error afterward.
-            // have to RE-OPEN browser or 'new tab', call 'file.close()' or 'refresh browser' without effect.
+            // have to close the one of the old Tabs.
             if (o != this.#addr) {
-                throw new Error("Browser limits open new file. have to wait or reopen Browser. --" + o);
+                throw new Error("Browser limits opening file. Close old Tabs, Open new Tab. -- " + o);
             }
         }
         return this.#db;
@@ -226,7 +219,7 @@ export class JsBoxConfigAsync {
 
 }
 
-function create_worker(u = "./load_iboxdb_worker.js") {
+function create_worker(u = "./load_iboxdb_opfs_worker.js") {
     let w = new Worker(new URL(u, import.meta.url), { type: "module" });
     return w;
 }
@@ -260,8 +253,7 @@ export async function _debug_fun() {
     print(o);
     o = await db_echo({ "id": 99n, value: 88 });
     print(o);
-    o = await db_root("./root");
-    print(o);
+    
     o = await db_debug_deletefile(88);
     print(o);
 

@@ -1,71 +1,86 @@
 
 
-import {
-    JsBox, JsBoxConfig,
-    ConfigVariable, db_root, db_debug_deletefile,
-    InMemoryStore, print, pause, is_node
-} from "./load_iboxdb.js";
 
+import {
+    JsBoxAsync, JsBoxConfigAsync,
+    db_debug_deletefile,
+    print
+} from "./load_iboxdb_opfs.js";
 
 const nf = (n) => {
     n = parseInt(n);
     return new Intl.NumberFormat().format(n);
 }
 
-export function test_db_online(script) {
+export function help() {
+    let o = [];
+    o.push(JsBoxAsync.prototype.insert.toString());
+    o.push(JsBoxAsync.prototype.update.toString());
+    o.push(JsBoxAsync.prototype.replace.toString());
+    o.push(JsBoxAsync.prototype.delete.toString());
+    o.push(JsBoxAsync.prototype.get.toString());
+    o.push(JsBoxAsync.prototype.select.toString());
+    o.push(JsBoxAsync.prototype.count.toString());
+    return o.join("\r\n");
+}
+
+export async function test_db_online(script) {
+    if (test_db_online.running == true) {
+        return "test_db_online, single thread only";
+    }
     try {
-        //InMemoryStore.bufs
-        let o = eval(script);
+        test_db_online.running = true;
+        let c = "(async ()=> { " + script + " })();";
+        let o = eval(c);
+        o = await o;
         return o;
     } catch (e) {
+        test_db_online.running = false;
         return e;
+    } finally {
+        test_db_online.running = false;
     }
 }
-export function test2() {
-    print("===============================")
-    print("iBoxDB.Java & TeaVM JavaScript!")
-    print("===============================")
+
+export async function test3() {
+
+    print("=============================")
+    print("iBoxDB.Java & TeaVM JS OPFS!")
+    print("=============================")
 
     // Prototype
     const proto = { "id": BigInt(0), "value": String("_"), "ver": BigInt(0) }
 
     print("")
-    print("Single User Testing : ")
+    const db_address = 21
+ 
+    await db_debug_deletefile(db_address);
 
-    const db_address = 19
+    let js = new JsBoxAsync(db_address)
 
-    db_root("../DBRoot");
-    db_debug_deletefile(db_address);
+    let cfg = await js.get_config();
+    await cfg.ensure_table(proto, "table", "id");
+    await cfg.ensure_index(proto, "table", false, "value");
+    await cfg.ensure_increment(proto, "table", "ver");
 
-    let js = new JsBox(db_address)
-    /**
-     * @type {JsBoxConfig}
-     */
-    let cfg = js.get_config();
-    cfg.ensure_table(proto, "table", "id");
-    cfg.ensure_index(proto, "table", false, "value");
-    cfg.ensure_increment(proto, "table", "ver");
-
-    js.open();
+    await js.open();
+    if (await js.count("from table") != 0) {
+        print("has old data.");
+    }
     let re_select = 2
     let total = 500
 
-    if (is_node()) {
-        //nodejs
-        total = 5000;
-    } else {
-        total = 2000;
-    }
     //total = 10
 
     let begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
         let v = { ...proto }
         // BigInt
-        v.id = js.new_id();
+        v.id = await js.new_id();
         v.value = String(i)
-        if (!js.insert("table", v))
-            print("Check Insert")
+        let io = await js.insert("table", v);
+        if (io != true)
+            print("Check Insert ", io)
     }
     let watch = (Date.now() - begin) / 1000
     watch = Math.max(watch, 1)
@@ -74,9 +89,9 @@ export function test2() {
 
     begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
-        let v = js.get("table", BigInt(i))
+        let v = await js.get("table", BigInt(i))
         v.value = "UP:" + String(i)
-        if (!js.update("table", v))
+        if (! await js.update("table", v))
             print("Check Update")
     }
     watch = (Date.now() - begin) / 1000
@@ -84,19 +99,19 @@ export function test2() {
     print(`Update AVG: ${nf(total / watch)}`)
 
 
-    let fc = js.count("from table")
+    let fc = await js.count("from table")
     print(`Count     : ${nf(fc)}`)
 
     begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
-        if (!js.delete("table", BigInt(i)))
+        if (! await js.delete("table", BigInt(i)))
             print("Check Delete")
     }
     watch = (Date.now() - begin) / 1000
     watch = Math.max(watch, 1)
     print(`Delete AVG: ${nf(total / watch)}`)
 
-    fc = js.count("from table")
+    fc = await js.count("from table")
     print(`Count     : ${nf(fc)}`)
 
 
@@ -105,13 +120,13 @@ export function test2() {
         let v = { ...proto }
         v.id = typeof (proto.id) == "bigint" ? BigInt(i) : i;
         v.value = String(i);
-        if (!js.replace("table", v))
+        if (! await js.replace("table", v))
             print("Check Replace 1")
     }
     watch = (Date.now() - begin) / 1000
     watch = Math.max(watch, 1)
     print(`Replace-1 AVG: ${nf(total / watch)}`)
-    fc = js.count("from table where id>=? & id<=?", -1000000000n, 1000000000n)
+    fc = await js.count("from table where id>=? & id<=?", -1000000000n, 1000000000n)
     print(`Count     : ${nf(fc)}`)
 
 
@@ -120,42 +135,44 @@ export function test2() {
         let v = { ...proto }
         v.id = typeof (proto.id) == "bigint" ? BigInt(i) : i;
         v.value = "up" + String(i);
-        if (!js.replace("table", v))
+        if (!await js.replace("table", v))
             print("Check Replace 2")
     }
     watch = (Date.now() - begin) / 1000
     watch = Math.max(watch, 1)
     print(`Replace-2 AVG: ${nf(total / watch)}`)
-    fc = js.count("from table where id>? & id<?", -100000001n, 100000001n)
+    fc = await js.count("from table where id>? & id<?", -100000001n, 100000001n)
     print(`Count     : ${nf(fc)}`)
+
 
     for (let i = 1; i < total + 1; i++) {
         let v = null;
         switch (i % 3) {
             case 0:
                 // id should use BigInt().
-                v = js.get("table", BigInt(i));
+                v = await js.get("table", BigInt(i));
                 break;
             case 1:
                 // Number works but not recommended.
-                v = js.get("table", Number(i));
+                v = await js.get("table", Number(i));
                 break;
             case 2:
-                v = js.select("from table where id==?", BigInt(i))[0]
+                v = (await js.select("from table where id==?", BigInt(i)))[0]
                 break;
         }
         if (!String(v["value"]).startsWith("up"))
             print("Check Replace 3")
     }
-    if (js.get("table", -99999999n) != null) {
+    if (await js.get("table", -99999999n) != null) {
         print("Check Replace 4")
     }
 
+
     let get_count = 0
     begin = Date.now()
-    for (let t = 0; t < re_select; t++)
+    for (let t = 0; t < (re_select * 2); t++)
         for (let i = 1n; i < BigInt(total) + 1n; i++) {
-            let v = js.get("table", i)
+            let v = await js.get("table", i)
             if (v["id"] !== i)
                 print("Check Get")
             else
@@ -166,27 +183,28 @@ export function test2() {
     print(`Get()  AVG: ${nf(get_count / watch)}/s`)
     get_count = 0
 
-
     //Re-Open
-    js.close();
+    await js.close();
     js = null
 
-    js = new JsBox(db_address)
-    js.open();
-
+    js = new JsBoxAsync(db_address)
+    await js.open();
 
     let sel_count = 0
     begin = Date.now()
     for (let t = 0; t < re_select; t++) {
         print(`Time:${t + 1} / ${re_select}`)
         for (let i = 1n; i < BigInt(total) + 1n; i++) {
-            let st = js.select("from table where id>=? & id<=?", i, i + 64n)
+            let st = await js.select("from table where id>=? & id<=?", i, i + 64n)
             for (let x = 0; x < st.length; x++) {
                 const s = st[x];
                 if (typeof (s.id) == "bigint" && s.id > 0n)
                     sel_count = sel_count + 1;
                 else
                     print("Check Select");
+
+                if (!String(s["value"]).startsWith("up"))
+                    print("Check Select")
             }
         }
     }
@@ -194,20 +212,9 @@ export function test2() {
     watch = Math.max(watch, 1)
     print(`Select AVG: ${nf(sel_count / watch)}/s`)
 
-    js.close();
-
-    pause("End.");
-}
+    await js.close();
 
 
+    print("End.")
 
-function is_main() {
-    try {
-        return import.meta.url === import.meta.resolve(process.argv[1]);
-    } catch {
-        return false;
-    }
-}
-if (is_main()) {
-    test2();
 }

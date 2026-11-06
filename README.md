@@ -28,7 +28,13 @@
 
 #### Get More Databases
 
-[iBoxDB online 1.0](https://iboxdb.github.io/db4o-gpl-doc/otherdbs/js01/index.html)
+
+[iBoxDB Online ](https://iboxdb.github.io/db4o-gpl-doc/otherdbs/js01/index.html)
 
 
-[iBoxDB OPFS 2.0](https://iboxdb.github.io/db4o-gpl-doc/otherdbs/js02/test_opfs.html)
+[iBoxDB JS OPFS ](https://iboxdb.github.io/db4o-gpl-doc/otherdbs/js01/opfs.html)
+
+
+**JavaScript Embedded NoSQL Database.**
+
+
