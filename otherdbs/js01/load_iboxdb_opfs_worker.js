@@ -7,14 +7,12 @@ var ConfigVariable = {
     FileIncSize: 1024n * 1024n * 1n,
     SwapFileBuffer: 1024n * 512n
 };
-class FileStore {
+
+class OpfsDatabaseConfig {
     static bufs = {}
     static get(path) {
         return this.bufs[path];
     }
-}
-
-class OpfsDatabaseConfig {
 
     CacheLength() {
         return BigInt(ConfigVariable.CacheLength);
@@ -27,35 +25,32 @@ class OpfsDatabaseConfig {
     }
 
     CreateStream(path, access) {
-        return new OpfsBStream(this, path, access);
+        return OpfsDatabaseConfig.get(path);
     }
     ExistsStream(path) {
-        return FileStore.bufs.hasOwnProperty(path);
+        return OpfsDatabaseConfig.bufs.hasOwnProperty(path);
     }
 
     DeleteStream(path) {
-        FileStore.bufs[path]?.truncate(0);
+        OpfsDatabaseConfig.bufs[path]?.SetLength(0);
         return true;
     }
 }
 
 class OpfsBStream {
-    constructor(_cfg, _path, _access) {
-        this.cfg = _cfg;
+    constructor(_path, handle) {
         this.path = _path;
-        this.access = _access;
-
-        this.int8View = FileStore.get(this.path);
+        this.int8View = handle;
     }
 
     Read(position, buffer, offset, count) {
         buffer = buffer.subarray(Number(offset), Number(offset + count));
-        return BigInt(this.int8View.read(buffer, {at: Number(position)}));
+        return BigInt(this.int8View.read(buffer, { at: Number(position) }));
     }
 
     Write(position, buffer, offset, count) {
         buffer = buffer.subarray(Number(offset), Number(offset + count));
-        this.int8View.write(buffer, {at: Number(position)});
+        this.int8View.write(buffer, { at: Number(position) });
     }
 
     Length() {
@@ -63,7 +58,6 @@ class OpfsBStream {
     }
 
     SetLength(value) {
-        // value would be Zero!
         this.int8View.truncate(Number(value));
     }
 
@@ -71,15 +65,7 @@ class OpfsBStream {
 
 // ===== Opfs VM =====
 import { InitWasmDatabaseConfigObject } from "./teavm/classes.js";
-const {DBHelper, DBWasm} = InitWasmDatabaseConfigObject(new OpfsDatabaseConfig());
-
-function print(...msg) {
-    console.log(...msg);
-}
-
-function worker_echo() {
-    return [worker_echo.name, ...arguments];
-}
+const { DBHelper, DBWasm } = InitWasmDatabaseConfigObject(new OpfsDatabaseConfig());
 
 function db_echo(obj) {
     return DBHelper().echo(obj);
@@ -102,8 +88,8 @@ async function create_db_files(root, addr) {
     let root_dir = await navigator.storage.getDirectory();
     let dfs = DBHelper().get_db_files(addr);
     for (let d of dfs) {
-        let fh = await root_dir.getFileHandle(d, {create: true});
-        FileStore.bufs[d] = await fh.createSyncAccessHandle();
+        let fh = await root_dir.getFileHandle(d, { create: true });
+        OpfsDatabaseConfig.bufs[d] = new OpfsBStream(d, await fh.createSyncAccessHandle());
     }
     thread_DBWasm = DBWasm(addr);
     thread_config = thread_DBWasm.get_config();
@@ -176,6 +162,15 @@ function ensure_increment(protoType, tableName, ...names) {
 }
 
 
+// ========== Worker ==============//
+
+function print(...msg) {
+    console.log(...msg);
+}
+
+function worker_echo() {
+    return [worker_echo.name, ...arguments];
+}
 
 onmessage = async (ev) => {
     let result = "NoMethod ?";

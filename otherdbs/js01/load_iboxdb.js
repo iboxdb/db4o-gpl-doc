@@ -12,16 +12,13 @@ var ConfigVariable = {
     SwapFileBuffer: 0n
 };
 
-class InMemoryStore {
-    static bufs = {}
-    static get(path) {
-        let o = this.bufs[path] ?? new ArrayBuffer(0, { maxByteLength: 1024 * 1024 * 1024 * 2 - 128 });
-        this.bufs[path] = o;
-        return o;
-    }
-}
 
 class WasmDatabaseConfig {
+    static bufs = {}
+    static get(path) {
+        this.bufs[path] = this.bufs[path] ?? new WasmBStream(path);
+        return this.bufs[path]
+    }
 
     CacheLength() {
         return BigInt(ConfigVariable.CacheLength);
@@ -34,26 +31,22 @@ class WasmDatabaseConfig {
     }
 
     CreateStream(path, access) {
-        return new WasmBStream(this, path, access);
+        return WasmDatabaseConfig.get(path);
     }
     ExistsStream(path) {
-        return InMemoryStore.bufs.hasOwnProperty(path);
+        return WasmDatabaseConfig.bufs.hasOwnProperty(path);
     }
 
     DeleteStream(path) {
-        InMemoryStore.bufs[path]?.resize(0);
+        WasmDatabaseConfig.bufs[path]?.SetLength(0);
         return true;
     }
 }
 
 class WasmBStream {
-    constructor(_cfg, _path, _access) {
-        this.cfg = _cfg;
+    constructor(_path) {
         this.path = _path;
-        this.access = _access;
-
-        this.buf = InMemoryStore.get(this.path);
-        this.int8View = new Int8Array(this.buf);
+        this.int8View = new Int8Array(0);
     }
 
     Read(position, buffer, offset, count) {
@@ -77,34 +70,21 @@ class WasmBStream {
 
     SetLength(value) {
         // value would be Zero!
-        this.buf.resize(Number(value));
+        let o = this.int8View;
+        this.int8View = new Int8Array(Number(value));
+        if (value > 0) {
+            this.int8View.set(o, 0);
+        }
     }
 
 }
 
 
-// ===== Wasm VM =====
+// ===== JavaScript VM =====
 import { InitWasmDatabaseConfigObject } from "./teavm/classes.js";
 const { DBHelper, DBWasm } = InitWasmDatabaseConfigObject(new WasmDatabaseConfig());
 
 // ===== export functions =====
-export function print(...msg) {
-    console.log(...msg);
-}
-
-export async function pause(msg) {
-    try {
-        const readline = await import("readline");
-        const t = readline.createInterface(process.stdin, process.stdout);
-        t.question(msg, (b) => {
-            t.close();
-        });
-    } catch (e) {
-        print(msg);
-        return e;
-    }
-}
-
 export function db_echo(obj) {
     return DBHelper().echo(obj);
 }
@@ -129,10 +109,6 @@ export class JsBox {
     constructor(addr = 1) {
         this.#addr = addr
         this.#db = DBWasm(addr);
-    }
-
-    toString() {
-        return `JsBox( ${this.#addr} ){}`;
     }
     /**
      * @returns @type {JsBoxConfig}
@@ -274,6 +250,24 @@ export class JsBoxConfig {
 
 }
 
+//========== DEBUG ==========================//
+export function print(...msg) {
+    console.log(...msg);
+}
+
+export async function pause(msg) {
+    try {
+        const readline = await import("readline");
+        const t = readline.createInterface(process.stdin, process.stdout);
+        t.question(msg, (b) => {
+            t.close();
+        });
+    } catch (e) {
+        print(msg);
+        return e;
+    }
+}
+
 export function is_node() {
     if (typeof process === "object" && "argv" in process) {
         return true;
@@ -290,8 +284,8 @@ function is_main() {
         return false;
     }
 }
-if (is_main()) {
 
+async function _debug_fun() {
     try {
         ConfigVariable.CacheLength = ConfigVariable.FileIncSize = ConfigVariable.SwapFileBuffer = 1;
 
@@ -350,6 +344,9 @@ if (is_main()) {
     } catch (e) {
         console.log(e.toString());
     }
+}
 
+if (is_main()) {
+    await _debug_fun();
 }
 

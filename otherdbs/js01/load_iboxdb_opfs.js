@@ -244,6 +244,8 @@ function worker_call(w, methodName, args) {
     })
 }
 
+// ======== DEBUG ============== //
+
 export async function _debug_fun() {
     let dir = await navigator.storage.getDirectory();
     for await (let x of dir.keys()) {
