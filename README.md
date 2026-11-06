@@ -28,6 +28,8 @@
 
 #### Get More Databases
 
+**JavaScript Embedded NoSQL Database.**
+
 
 [iBoxDB Online ](https://iboxdb.github.io/db4o-gpl-doc/otherdbs/js01/index.html)
 
@@ -35,6 +37,5 @@
 [iBoxDB JS OPFS ](https://iboxdb.github.io/db4o-gpl-doc/otherdbs/js01/opfs.html)
 
 
-**JavaScript Embedded NoSQL Database.**
 
 
