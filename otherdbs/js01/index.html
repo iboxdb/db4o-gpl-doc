@@ -50,11 +50,11 @@
         <textarea id="txtjs" rows="20" spellcheck="false" autocomplete="off">
 let js = new JsBox();          
 let cfg = js.get_config();
-cfg.ensure_table({"id":0n}, "table", "id");
+cfg.ensure_table({"id":BigInt(0)}, "table", "id");
 js.open();
 let obj = {};
 //Begin Write Code Here
-obj.name = "my-name";
+obj.value = Date.now();
 obj.items = [ {"item_id":33n}, {"item_id":66n,"pro":true} ];
 //End
 obj.id = js.new_id();

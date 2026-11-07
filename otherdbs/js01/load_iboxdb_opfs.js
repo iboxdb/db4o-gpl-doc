@@ -16,61 +16,53 @@ export async function db_echo(obj) {
 
 
 export async function db_debug_deletefile(addr) {
-    lock(addr);
+    if (JsBoxAsync.backends[addr]) {
+        throw new Error("close database and await before delete, " + addr);
+    }
     let w = create_worker();
     let r = await worker_call(w, db_debug_deletefile.name, ["", ...arguments]);
+    if (r != db_debug_deletefile.name) {
+        throw new Error(r);
+    }
     w.terminate();
-    unlock(addr);
     return r;
 }
 
-var globalSingleInstance = {};
-function lock(addr) {
-    addr = String(addr);
-    if (globalSingleInstance[addr]) {
-        throw new Error("Close Another Database and await.");
-    }
-    globalSingleInstance[addr] = addr;
-}
-function unlock(addr) {
-    addr = String(addr);
-    if (globalSingleInstance[addr] == addr) {
-        globalSingleInstance[addr] = undefined;
-    } else {
-        throw new Error("Can not Unlock. " + addr);
-    }
-}
-
 export class JsBoxAsync {
+    //Share the same backend until close()
+    static backends = {}
 
-    #db = null;
     #addr = 0;
     constructor(addr = 1) {
         this.#addr = addr
-        lock(this.#addr);
     }
     async #init() {
         if (this.#addr == 0) {
             throw new Error("Closed");
         }
-        if (this.#db == null) {
-            this.#db = create_worker();
-            let o = await worker_call(this.#db, "DBWasm", ["", this.#addr]);
-            // return "No modification allowed" when the Browser to limit too many files operation.
-            // if using only one database, this wouldn't happen.
-            // but if open the same page in two Tabs, or one Tab but back and forward, this will happen.
-            // because can't open files, then will get "can't access property ..." error afterward.
-            // have to close the one of the old Tabs.
-            if (o != this.#addr) {
-                throw new Error("Browser limits opening file. Close old Tabs, Open new Tab. -- " + o);
-            }
+        if (JsBoxAsync.backends[this.#addr]) {
+            return JsBoxAsync.backends[this.#addr];
         }
-        return this.#db;
+        JsBoxAsync.backends[this.#addr] = create_worker();
+
+        let o = await worker_call(JsBoxAsync.backends[this.#addr], "DBWasm", ["", this.#addr]);
+        // return "No modification allowed" when the Browser to limit too many files operation.
+        // if using only one database, this wouldn't happen.
+        // but if open the same page in two Tabs, or one Tab but back and forward, this will happen.
+        // because can't open files, then will get "can't access property ..." error afterward.
+        // have to close the one of the old Tabs.
+        if (o != this.#addr) {
+            JsBoxAsync.backends[this.#addr] = undefined;
+            throw new Error("Browser limits opening file. Close old Tabs, Open new Tab. -- " + o);
+        }
+
+        return JsBoxAsync.backends[this.#addr];
     }
     /**
      * @type {JsBoxConfigAsync}
      */
     async get_config() {
+        // have to close() database before update config.
         return new JsBoxConfigAsync(await this.#init());
     }
     async open() {
@@ -91,7 +83,7 @@ export class JsBoxAsync {
                 throw new Error(o.toString());
             }
             w.terminate();
-            unlock(this.#addr);
+            JsBoxAsync.backends[this.#addr] = undefined;
             this.#addr = 0;
         }
         return this.#addr;
@@ -255,7 +247,7 @@ export async function _debug_fun() {
     print(o);
     o = await db_echo({ "id": 99n, value: 88 });
     print(o);
-    
+
     o = await db_debug_deletefile(88);
     print(o);
 

@@ -37,14 +37,13 @@
         <div id="jsdiv" style="display: grid">
             <textarea id="txtjs" rows="20" spellcheck="false" autocomplete="off">
 const addr = 2; 
-JsBoxAsync[addr] = JsBoxAsync[addr] ?? new JsBoxAsync(addr);
-let js = JsBoxAsync[addr];          
+let js = new JsBoxAsync(addr);          
 let cfg = await js.get_config();
 await cfg.ensure_table({"id":BigInt(0)}, "table", "id");
 await js.open();
 let obj = {};
 //Begin Write Code Here
-obj.value = 100
+obj.value = Date.now()
 obj.items = [ {"item_id":33n}, {"item_id":66n,"pro":true} ];
 //End
 obj.id = await js.new_id();
@@ -53,7 +52,6 @@ let re = await js.select("from table limit 0, 10" );
 let debug_del_db = false;
 if (debug_del_db){
     await js.close(); re = await db_debug_deletefile(addr);
-    JsBoxAsync[addr] = undefined;
 }
 return re;
             </textarea>
