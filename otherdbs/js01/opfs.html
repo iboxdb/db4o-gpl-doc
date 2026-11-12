@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>iBoxDB OPFS JavaScript Embedded NoSQL Database online</title>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <meta name="description" content="JavaScript Embedded NoSQL Database,iBoxDB OPFS online." />
-        <meta name="keywords" content="iBoxDB,NoSQL,JavaScript" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="text/javascript">
-            var run_script = null;
-        </script>
-        <script type="module">
-            import { test_db_online, help } from './test_iboxdb_opfs.js';
-            run_script = async function () {
-                //console.log(txtjs.value);
-                let o = await test_db_online(txtjs.value);
-                //console.log(o);
-                txtout.value = JSON.stringify(o, (k, v) => {
-                    if (typeof (v) == "bigint")
-                        return Number(v);
-                    else if (v instanceof Error)
-                        return v.toString();
-                    else
-                        return v;
-                }, 2);
-            }
-            setTimeout(
-                    () => {
+<head>
+    <title>iBoxDB OPFS JavaScript Embedded NoSQL Database online</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="JavaScript Embedded NoSQL Database,iBoxDB OPFS online." />
+    <meta name="keywords" content="iBoxDB,NoSQL,JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./common.js"></script>
+    <script type="text/javascript">
+        var run_script = null;
+    </script>
+    <script type="module">
+        import { test_db_online, help } from './test_iboxdb_opfs.js';
+        run_script = async function () {
+            let o = await test_db_online(txtjs.value);
+            txtout.value = json_string(o);
+        }
+        setTimeout(
+            () => {
                 txtout.value = help();
             }
             , 500);
-        </script>
-    </head>
+    </script>
+</head>
 
-    <body>
-        <div id="jsdiv" style="display: grid">
-            <textarea id="txtjs" rows="20" spellcheck="false" autocomplete="off">
+<body>
+    <div id="jsdiv" style="display: grid">
+        <textarea id="txtjs" rows="20" spellcheck="false" autocomplete="off">
 const addr = 2; 
 let js = new JsBoxAsync(addr);          
 let cfg = await js.get_config();
@@ -55,13 +47,13 @@ if (debug_del_db){
 }
 return re;
             </textarea>
-            <button onclick="(async () => {
+        <button onclick="(async () => {
                         await run_script();
                     })()">Run Script</button>
-            <textarea id="txtout" rows="20" spellcheck="false" autocomplete="off">
+        <textarea id="txtout" rows="20" spellcheck="false" autocomplete="off">
 
             </textarea>
-        </div>
-    </body>
+    </div>
+</body>
 
 </html>

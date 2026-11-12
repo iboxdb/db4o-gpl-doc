@@ -1,9 +1,10 @@
 
 
-import {JsBox, JsBoxConfig,
-        db_debug_deletefile,
-        print, pause, is_node
-        } from "./load_iboxdb.js";
+import {
+    JsBox, JsBoxConfig,
+    db_debug_deletefile,
+    print, pause, is_node
+} from "./load_iboxdb.js";
 
 
 const nf = (n) => {
@@ -37,7 +38,7 @@ export function test2() {
     print("===============================")
 
     // Prototype
-    const proto = {"id": BigInt(0), "value": String("_"), "ver": BigInt(0)}
+    const proto = { "id": BigInt(0), "value": String("_"), "ver": BigInt(0) }
 
     print("")
     print("Single User Testing : ")
@@ -64,15 +65,15 @@ export function test2() {
 
     if (is_node()) {
         //nodejs
-        total = 5000;
+        total = 10000;
     } else {
-        total = 2000;
+        total = 4000;
     }
     //total = 10
 
     let begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
-        let v = {...proto}
+        let v = { ...proto }
         // BigInt
         v.id = js.new_id();
         v.value = String(i)
@@ -114,7 +115,7 @@ export function test2() {
 
     begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
-        let v = {...proto}
+        let v = { ...proto }
         v.id = typeof (proto.id) == "bigint" ? BigInt(i) : i;
         v.value = String(i);
         if (!js.replace("table", v))
@@ -129,7 +130,7 @@ export function test2() {
 
     begin = Date.now()
     for (let i = 1; i < total + 1; i++) {
-        let v = {...proto}
+        let v = { ...proto }
         v.id = typeof (proto.id) == "bigint" ? BigInt(i) : i;
         v.value = "up" + String(i);
         if (!js.replace("table", v))
@@ -165,13 +166,16 @@ export function test2() {
 
     let get_count = 0
     begin = Date.now()
-    for (let t = 0; t < re_select; t++)
+    for (let t = 0; t < 10; t++)
         for (let i = 1n; i < BigInt(total) + 1n; i++) {
             let v = js.get("table", i)
             if (v["id"] !== i)
                 print("Check Get")
             else
                 get_count = get_count + 1
+
+            if (!String(v["value"]).startsWith("up"))
+                print("Check Get 2")
         }
     watch = (Date.now() - begin) / 1000
     watch = Math.max(watch, 1)
@@ -199,6 +203,9 @@ export function test2() {
                     sel_count = sel_count + 1;
                 else
                     print("Check Select");
+
+                if (!String(s["value"]).startsWith("up"))
+                    print("Check Select 2")
             }
         }
     }

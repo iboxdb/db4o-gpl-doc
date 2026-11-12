@@ -53,7 +53,7 @@ export async function test3() {
 
     print("")
     const db_address = 21
- 
+
     await db_debug_deletefile(db_address);
 
     let js = new JsBoxAsync(db_address)
@@ -176,7 +176,10 @@ export async function test3() {
             if (v["id"] !== i)
                 print("Check Get")
             else
-                get_count = get_count + 1
+                get_count = get_count + 1;
+
+            if (!String(v["value"]).startsWith("up"))
+                print("Check Get 2")
         }
     watch = (Date.now() - begin) / 1000
     watch = Math.max(watch, 1)
@@ -204,7 +207,7 @@ export async function test3() {
                     print("Check Select");
 
                 if (!String(s["value"]).startsWith("up"))
-                    print("Check Select")
+                    print("Check Select 2")
             }
         }
     }

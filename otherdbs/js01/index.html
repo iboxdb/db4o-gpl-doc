@@ -8,6 +8,7 @@
     <meta name="keywords" content="iBoxDB,NoSQL,JavaScript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="./common.js"></script>
     <script type="text/javascript">
         var main = null;
         var test2 = null;
@@ -24,17 +25,8 @@
         test2 = () => _test2();
         test3 = () => _test3().then(() => true);
         run_script = function () {
-            //console.log(txtjs.value);
             let o = test_db_online(txtjs.value);
-            //console.log(o);
-            txtout.value = JSON.stringify(o, (k, v) => {
-                if (typeof (v) == "bigint")
-                    return Number(v);
-                else if (v instanceof Error)
-                    return v.toString();
-                else
-                    return v;
-            }, 2);
+            txtout.value = json_string(o);
         }
         setTimeout(
             () => {
